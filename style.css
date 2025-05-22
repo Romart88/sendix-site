@@ -43,6 +43,12 @@ nav a {
 .hero p {
   font-size: 18px;
 }
+.slogan {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #f44336;
+  font-weight: bold;
+}
 .btn {
   display: inline-block;
   margin-top: 30px;
@@ -51,19 +57,21 @@ nav a {
   color: white;
   border-radius: 6px;
 }
-.features, .cards {
+.about, .pricing, #cases, #contact, #faq, #target {
+  padding: 60px 0;
+}
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 60px 0;
+  gap: 20px;
 }
-.feature, .card {
+.card {
   background: white;
   flex: 1;
-  margin: 10px;
   padding: 30px;
-  text-align: center;
   border-radius: 8px;
+  text-align: left;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
   min-width: 280px;
 }
@@ -76,4 +84,46 @@ footer {
 }
 footer a {
   color: #f44336;
+}
+form.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin-top: 20px;
+}
+form input, form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.grid li {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.logo-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.logo-center img {
+  height: 50px;
 }
