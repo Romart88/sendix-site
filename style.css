@@ -1,0 +1,79 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f9fb;
+  color: #2c3e50;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+.logo {
+  height: 40px;
+}
+nav a {
+  margin-left: 20px;
+  font-weight: bold;
+}
+.hero {
+  text-align: center;
+  background: white;
+  padding: 80px 20px;
+}
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 18px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background: #f44336;
+  color: white;
+  border-radius: 6px;
+}
+.features, .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px 0;
+}
+.feature, .card {
+  background: white;
+  flex: 1;
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  min-width: 280px;
+}
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 14px;
+}
+footer a {
+  color: #f44336;
+}
