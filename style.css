@@ -15,23 +15,22 @@ header{position:sticky;top:0;background:#fff;z-index:1000;border-bottom:1px soli
 .top-bar a:hover{color:#0056b3}
 
 .hero-block{
-    position:sticky;      /* «прилипает» под меню */
-    top:48px;             /* если меню height≈60px */
-    z-index:900;          /* меньше, чем у header (1000) */
+    position:relative;      /* было sticky */
+    margin-top:8px;         /* тонкий отступ от меню */
     text-align:center;
     background:#fff;
-    padding:4px 0 4px;  /* компактнее */
+    padding:0 0 12px;       /* снизу 12 px воздуха, сверху 0 */
     border-bottom:1px solid #eee;
 }
 
 .hero-block .logo{
-    max-width:160px;      /* увеличьте при желании */
+    max-width:200px;      /* увеличьте при желании */
     height:auto;
-    margin-bottom:4px;
+    margin-bottom:6px;
 }
 
 .hero-block h1  {font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:.4rem;}
-.hero-block .lead{font-size:.95rem;margin-bottom:.25rem;font-weight:500;}
+.hero-block .lead{font-size:.95rem;margin-bottom:.20rem;font-weight:500;}
 .hero-block strong{font-size:.9rem;font-weight:600;}
 
 /* Z sections */
