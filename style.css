@@ -15,11 +15,14 @@ header{position:sticky;top:0;background:#fff;z-index:1000;border-bottom:1px soli
 .top-bar a:hover{color:#0056b3}
 
 .hero-block{
-    position:relative;      /* было sticky */
-    margin-top:0px;         /* тонкий отступ от меню */
+    position:sticky;        /* снова «липкий» */
+    top:60px;               /* 60 px = высота вашего меню.
+                               Если меню станет выше/ниже – измените цифру */
+    z-index:900;            /* ниже menu (1000), выше остального контента */
+    margin-top:0;           /* убираем искусственный отступ */
     text-align:center;
     background:#fff;
-    padding:0 0 8px;       /* снизу 12 px воздуха, сверху 0 */
+    padding:0 0 8px;        /* сверху 0, снизу 8 px «воздуха» */
     border-bottom:1px solid #eee;
 }
 
