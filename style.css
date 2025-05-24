@@ -16,11 +16,11 @@ header{position:sticky;top:0;background:#fff;z-index:1000;border-bottom:1px soli
 
 .hero-block{
     position:sticky;      /* «прилипает» под меню */
-    top:60px;             /* если меню height≈60px */
+    top:48px;             /* если меню height≈60px */
     z-index:900;          /* меньше, чем у header (1000) */
     text-align:center;
     background:#fff;
-    padding:8px 0 8px;  /* компактнее */
+    padding:4px 0 4px;  /* компактнее */
     border-bottom:1px solid #eee;
 }
 
