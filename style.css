@@ -14,17 +14,25 @@ header{position:sticky;top:0;background:#fff;z-index:1000;border-bottom:1px soli
 .top-bar a{text-decoration:none;color:#007bff;font-weight:600}
 .top-bar a:hover{color:#0056b3}
 
-/* LOGO */
-.header-logo{text-align:center;padding:8px 0 0px}
-.logo{max-width:260px;width:40vw;height:auto}
-
-/* HERO */
-.hero{background:#f5f7fa;text-align:center;padding:24px 32px}
-.hero .lead{font-weight:500;font-size:1.05rem;margin-bottom:.5rem}
-.hero-inner{
-    max-width:720px;
-    margin:0 auto;
+.hero-block{
+    position:sticky;      /* «прилипает» под меню */
+    top:60px;             /* если меню height≈60px */
+    z-index:900;          /* меньше, чем у header (1000) */
+    text-align:center;
+    background:#fff;
+    padding:24px 0 12px;  /* компактнее */
+    border-bottom:1px solid #eee;
 }
+
+.hero-block .logo{
+    max-width:160px;      /* увеличьте при желании */
+    height:auto;
+    margin-bottom:12px;
+}
+
+.hero-block h1  {font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:.4rem;}
+.hero-block .lead{font-size:.95rem;margin-bottom:.25rem;font-weight:500;}
+.hero-block strong{font-size:.9rem;font-weight:600;}
 
 /* Z sections */
 .section{display:flex;align-items:center;gap:40px;padding:64px 6vw}
