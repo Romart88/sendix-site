@@ -16,19 +16,19 @@ header{position:sticky;top:0;background:#fff;z-index:1000;border-bottom:1px soli
 
 .hero-block{
     position:relative;      /* было sticky */
-    margin-top:8px;         /* тонкий отступ от меню */
+    margin-top:0px;         /* тонкий отступ от меню */
     text-align:center;
     background:#fff;
-    padding:0 0 12px;       /* снизу 12 px воздуха, сверху 0 */
+    padding:0 0 8px;       /* снизу 12 px воздуха, сверху 0 */
     border-bottom:1px solid #eee;
 }
 
 .hero-block .logo{
-    max-width:200px;      /* увеличьте при желании */
+    display:block;           /* убирает inline-пробелы */
+    margin:0 auto 4px;       /* отцентровали и немного опустили */
+    max-width:200px;         /* увеличите, если нужно больше */
     height:auto;
-    margin-bottom:6px;
 }
-
 .hero-block h1  {font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:.4rem;}
 .hero-block .lead{font-size:.95rem;margin-bottom:.20rem;font-weight:500;}
 .hero-block strong{font-size:.9rem;font-weight:600;}
