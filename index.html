@@ -1,6 +1,3 @@
-# Let's create the initial structure for the index.html file.
-
-html_content = """
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -11,102 +8,36 @@ html_content = """
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Fixed Menu -->
-    <nav class="fixed-menu">
-        <a href="#about">О нас</a>
-        <a href="#pains">Топ-7 болей</a>
-        <a href="#for-whom">Кому подойдёт</a>
-        <a href="#tariffs">Тарифы</a>
-        <a href="#cases">Кейсы</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contacts">Контакты</a>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
+    <header>
         <h1>Ваш путь к новым клиентам</h1>
         <p>Email-рассылки по бизнес-базам с результатом</p>
         <p class="slogan">Вы увидели нас — увидят и вас, ваши клиенты</p>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <section class="about">
         <h2>О нас</h2>
-        <div class="about-content">
-            <p>Sendix — это профессиональный сервис email-рассылок по актуальным B2B-базам. Помогаем компаниям донести свои предложения напрямую до лиц, принимающих решения. Гарантируем прозрачную отчётность и юридическую корректность.</p>
-        </div>
+        <p>Sendix — это профессиональный сервис email-рассылок по актуальным B2B-базам. Помогаем компаниям донести свои предложения напрямую до лиц, принимающих решения. Гарантируем прозрачную отчётность и юридическую корректность.</p>
     </section>
 
-    <!-- Top 7 Pains Section -->
-    <section id="pains" class="pains">
+    <section class="pains">
         <h2>Топ-7 болей клиентов, которые решает email-рассылка</h2>
         <div class="pains-content">
-            <!-- Pains will be added here -->
+            <div class="pain-card">
+                <h3>Нет входящего потока заявок</h3>
+                <p>Менеджеры работают только по холодным звонкам — откликов почти нет</p>
+            </div>
+            <div class="pain-card">
+                <h3>Сложно донести предложение до ЛПР</h3>
+                <p>Через звонок сложно пройти секретаря, через рекламу — дорого</p>
+            </div>
+            <!-- Добавьте остальные карточки аналогичным образом -->
         </div>
     </section>
 
-    <!-- For Whom Section -->
-    <section id="for-whom" class="for-whom">
-        <h2>Кому подойдёт</h2>
-        <div class="for-whom-content">
-            <!-- Content will be added here -->
-        </div>
-    </section>
+    <!-- Добавьте другие секции аналогичным образом -->
 
-    <!-- Tariffs Section -->
-    <section id="tariffs" class="tariffs">
-        <h2>Тарифы</h2>
-        <div class="tariffs-content">
-            <!-- Tariffs will be added here -->
-        </div>
-    </section>
-
-    <!-- Cases Section -->
-    <section id="cases" class="cases">
-        <h2>Кейсы</h2>
-        <div class="cases-content">
-            <!-- Cases will be added here -->
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <h2>Часто задаваемые вопросы</h2>
-        <div class="faq-content">
-            <!-- FAQ will be added here -->
-        </div>
-    </section>
-
-    <!-- Contacts Section -->
-    <section id="contacts" class="contacts">
-        <h2>Контакты и заявка</h2>
-        <div class="contacts-content">
-            <!-- Contact form will be added here -->
-        </div>
-    </section>
-
-    <!-- Fixed Buttons -->
-    <div class="fixed-buttons">
-        <a href="tel:+79137888449" class="call-button">
-            <img src="phone-icon.png" alt="Call">
-        </a>
-        <a href="https://wa.me/79137888449" class="whatsapp-button" target="_blank">
-            <img src="whatsapp-icon.png" alt="WhatsApp">
-        </a>
-    </div>
-
-    <!-- Footer -->
     <footer>
         <p>© 2025 Sendix — Email-рассылки для бизнеса.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-"""
-
-file_path = "sendix-site/index.html"
-with open(file_path, "w", encoding="utf-8") as file:
-    file.write(html_content)
-
-file_path
