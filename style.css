@@ -1,0 +1,18 @@
+:root{--dark:#1e293b;--accent:#ff4d4f}
+*{box-sizing:border-box}body{margin:0;font-family:'Inter',sans-serif;background:#f9f9fb;color:#333}
+header{background:#fff;position:sticky;top:0;z-index:100;padding:12px 0;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav ul{display:flex;justify-content:center;gap:24px;margin:0;padding:0;list-style:none;font-weight:600}
+nav a{text-decoration:none;color:#333}
+.hero{position:relative;min-height:640px;background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);display:flex;align-items:center;justify-content:flex-start;padding:0 8%}
+.hero-img{width:45%;max-width:520px}
+.hero-text{color:#fff;max-width:40%}
+.hero-text h1{margin:0;font-size:2.6rem;line-height:1.2}
+.about-card{position:absolute;left:8%;bottom:-60px;width:440px;background:#fff;border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.15);padding:24px}
+.fab{position:absolute;right:8%;border-radius:50%;width:56px;height:56px;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.call{top:42%}.wa{top:52%}
+.problems{padding:140px 8% 80px}
+.problems h2{text-align:center;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+.item img{width:32px;height:32px}
+.item h4{margin:12px 0 8px;font-size:1.1rem;color:var(--accent)}
+footer{background:#222;color:#fff;text-align:center;padding:24px;margin-top:120px}
