@@ -1,18 +1,223 @@
-:root{--dark:#1e293b;--accent:#ff4d4f}
-*{box-sizing:border-box}body{margin:0;font-family:'Inter',sans-serif;background:#f9f9fb;color:#333}
-header{background:#fff;position:sticky;top:0;z-index:100;padding:12px 0;box-shadow:0 2px 4px rgba(0,0,0,.05)}
-nav ul{display:flex;justify-content:center;gap:24px;margin:0;padding:0;list-style:none;font-weight:600}
-nav a{text-decoration:none;color:#333}
-.hero{position:relative;min-height:640px;background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);display:flex;align-items:center;justify-content:flex-start;padding:0 8%}
-.hero-img{width:45%;max-width:520px}
-.hero-text{color:#fff;max-width:40%}
-.hero-text h1{margin:0;font-size:2.6rem;line-height:1.2}
-.about-card{position:absolute;left:8%;bottom:-60px;width:440px;background:#fff;border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.15);padding:24px}
-.fab{position:absolute;right:8%;border-radius:50%;width:56px;height:56px;box-shadow:0 4px 16px rgba(0,0,0,.2)}
-.call{top:42%}.wa{top:52%}
-.problems{padding:140px 8% 80px}
-.problems h2{text-align:center;margin-bottom:40px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
-.item img{width:32px;height:32px}
-.item h4{margin:12px 0 8px;font-size:1.1rem;color:var(--accent)}
-footer{background:#222;color:#fff;text-align:center;padding:24px;margin-top:120px}
+/* Сброс базовых стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Основной фон и цвет текста */
+body {
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Верхнее меню */
+header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: #e63946;
+}
+
+/* Главный экран */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 30px;
+  background-color: #0a1f33;
+  color: #fff;
+  position: relative;
+}
+
+.hero-img {
+  max-width: 400px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-text strong {
+  display: block;
+  margin-top: 15px;
+}
+
+/* Фиксированные кнопки */
+.fab {
+  position: fixed;
+  bottom: 20px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab.call {
+  right: 90px;
+  background: #ff5a5f;
+}
+
+.fab.wa {
+  right: 20px;
+}
+
+/* О нас */
+.about-card {
+  padding: 60px 30px;
+  background: #fff;
+}
+
+.about-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Топ-7 болей */
+.problems {
+  padding: 60px 30px;
+  background: #f1f5f9;
+}
+
+.problems h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.item img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+/* Кому подойдёт */
+.for-whom {
+  padding: 60px 30px;
+}
+
+.for-whom ul {
+  list-style: disc inside;
+}
+
+/* Тарифы */
+.pricing {
+  background: #f9fafb;
+  padding: 60px 30px;
+}
+
+.tariff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tariff {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 5px solid #e63946;
+}
+
+/* Кейсы */
+.cases {
+  padding: 60px 30px;
+}
+
+.case {
+  background: #f8f8f8;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #457b9d;
+}
+
+/* FAQ */
+.faq {
+  padding: 60px 30px;
+  background: #fff;
+}
+
+.faq ul {
+  list-style: none;
+}
+
+.faq li {
+  margin-bottom: 10px;
+}
+
+/* Контакты */
+.contacts {
+  padding: 60px 30px;
+  background: #f1f5f9;
+}
+
+.contacts form {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contacts input,
+.contacts textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contacts button {
+  background: #e63946;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Подвал */
+footer {
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
