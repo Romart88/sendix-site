@@ -14,13 +14,56 @@ header{position:sticky;top:0;background:#fff;z-index:1000;border-bottom:1px soli
 .top-bar a{text-decoration:none;color:#007bff;font-weight:600}
 .top-bar a:hover{color:#0056b3}
 
+/* ---------- HERO BLOCK ---------- */
 .hero-block{
-    position:sticky;          /* прилепляем под меню */
-    top:48px;                 /* 48 px = высота top-bar */
-    z-index:900;              /* чуть ниже меню (1000) */
+    position:sticky;          /* «прилипает» к низу шапки */
+    top:48px;                 /* высота меню */
+    z-index:900;              /* чуть ниже меню */
     background:#fff;
-    padding:16px 0 24px;      /* верх-низ поменьше, снизу чуть воздуха */
+    padding:12px 0 8px;       /* сверху меньше, снизу чуть воздуха */
     border-bottom:1px solid #eee;
+}
+.hero-inner{
+    max-width:720px;
+    margin:0 auto;
+    text-align:center;
+}
+.hero-block .logo{
+    display:block;
+    max-width:200px;          /* при желании меняйте */
+    height:auto;
+    margin:0 auto 6px;        /* ↓ расстояние logo–текст стало 6 px */
+}
+
+/* типографика */
+.hero-block h1      {font-size:clamp(1.4rem,3vw,1.9rem); margin-bottom:.25rem;}
+.hero-block .lead   {font-size:.95rem;  margin-bottom:.20rem; font-weight:500;}
+.hero-block strong  {font-size:.9rem;   font-weight:600;}
+
+/* ---------- FIXED BUTTONS в герое ---------- */
+.fixed-buttons{
+    position:absolute;
+    top:8px;                  /* к верхнему краю hero-block */
+    right:24px;               /* прячемся под правый край */
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+.fixed-buttons a{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#007bff;       /* синий телефон */
+}
+.fixed-buttons a:last-child{
+    background:#25D366;       /* зелёный WhatsApp */
+}
+.fixed-buttons img{
+    width:26px;
+    height:26px;
 }
 
 /* компактный контейнер */
