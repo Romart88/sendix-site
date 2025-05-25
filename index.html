@@ -1,139 +1,260 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Sendix — Email‑рассылки для бизнеса</title>
-<link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sendix – сервис email-рассылок</title>
+  <meta name="description" content="Sendix – современный сервис email-рассылок для бизнеса. Автоматизация кампаний, высокая доставляемость, аналитика." />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <header>
+    <nav class="top-nav">
+      <div class="container nav-container">
+        <a href="#" class="logo"><img src="images/logo.png" alt="Sendix логотип" /></a>
+        <ul class="menu">
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#pains">Топ-7 болей</a></li>
+          <li><a href="#who">Кому подойдёт</a></li>
+          <li><a href="#pricing">Тарифы</a></li>
+          <li><a href="#cases">Кейсы</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Меню" aria-expanded="false">&#9776;</button>
+      </div>
+    </nav>
+  </header>
 
-<header>
-  <div class="top-bar">
-    <ul>
-      <li><a href="#about">О нас</a></li>
-      <li><a href="#pains">Топ‑7 болей</a></li>
-      <li><a href="#target">Кому подойдёт</a></li>
-      <li><a href="#pricing">Тарифы</a></li>
-      <li><a href="#cases">Кейсы</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contacts">Контакты</a></li>
-    </ul>
-</header>
- <section class="hero-block">
-    <div class="hero-inner">
-        <img src="logo.png" alt="Sendix" class="logo">
-
-        <h1>Ваш путь к новым клиентам</h1>
-        <p class="lead">Email-рассылки по бизнес-базам с результатом</p>
-        <strong>Вы увидели нас — увидят и вас, ваши клиенты</strong>
-
-        <!-- фикс-кнопки прямо в герое -->
-        <div class="fixed-buttons">
-            <a href="tel:+79137888449" class="phone">
-                <img src="phone.svg" alt="Позвонить">
-            </a>
-            <a href="https://wa.me/79137888449" target="_blank">
-                <img src="whatsapp_official.svg" alt="WhatsApp">
-            </a>
-        </div>
+  <section class="hero">
+    <div class="container hero-container">
+      <h1>Sendix – быстрые и эффективные email-рассылки</h1>
+      <p class="subtitle">Автоматизируйте вашу email-маркетинг кампанию и увеличьте конверсию с помощью умного сервиса Sendix.</p>
+      <a href="#pricing" class="btn">Попробовать бесплатно</a>
     </div>
-</section>
+  </section>
 
-<section class="section" id="about">
-  <div class="text">
-    <h2>О нас</h2>
-    <p>Sendix — это профессиональный сервис email‑рассылок по актуальным B2B‑базам. Помогаем компаниям донести свои предложения напрямую до лиц, принимающих решения. Гарантируем прозрачную отчётность и юридическую корректность.</p>
-  </div>
-  <img src="https://source.unsplash.com/collection/190727/600x400" alt="" class="illustration"/>
-</section>
+  <section id="about" class="about">
+    <div class="container">
+      <h2>О нас</h2>
+      <div class="about-card">
+        <img src="images/about-icon.png" alt="О Sendix" class="about-icon" />
+        <p>Sendix – это платформа для email-рассылок, которая помогает бизнесу и контент-мейкерам легко взаимодействовать с аудиторией. Мы запустились в 2023 году и уже обслуживаем более 5&nbsp;000 клиентов. Наша миссия – сделать email-маркетинг простым, эффективным и доступным.</p>
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="pains">
-  <div class="text">
-    <h2>Топ‑7 болей клиентов, которые решает email‑рассылка</h2>
-    <ol>
-      <li><b>Нет входящего потока заявок</b><br>«Менеджеры работают только по холодным звонкам — откликов почти нет»<br><i>Решение:</i> Рассылка приводит тёплые заявки…</li>
-      <li><b>Сложно донести предложение до ЛПР</b> …</li>
-      <li><b>Потеря контакта после звонка</b> …</li>
-      <li><b>Мало узнают о бренде</b> …</li>
-      <li><b>Нужно протестировать нишу / оффер</b> …</li>
-      <li><b>Дорого запускать рекламу</b> …</li>
-      <li><b>Сложность аналитики и отчётов</b> …</li>
-    </ol>
-  </div>
-  <img src="https://source.unsplash.com/collection/928423/600x400" alt="" class="illustration"/>
-</section>
+  <section id="pains" class="pains">
+    <div class="container">
+      <h2>Топ-7 болей и их решения</h2>
+      <div class="pains-grid">
+        <div class="pain-card">
+          <img src="images/icons/spam.png" alt="Проблема спам" />
+          <h3>Письма попадают в спам</h3>
+          <p>Sendix обеспечивает высокую доставляемость писем благодаря мониторингу репутации и очистке списков адресов.</p>
+        </div>
+        <div class="pain-card">
+          <img src="images/icons/low-open.png" alt="Проблема открытий" />
+          <h3>Низкий процент открытий</h3>
+          <p>Персонализированные темы и оптимальное время отправки в Sendix повышают открываемость рассылок на 30% и более.</p>
+        </div>
+        <div class="pain-card">
+          <img src="images/icons/design.png" alt="Проблема дизайна" />
+          <h3>Сложности с дизайном писем</h3>
+          <p>Готовые шаблоны и drag-and-drop редактор позволяют создавать красивые письма без навыков верстки.</p>
+        </div>
+        <div class="pain-card">
+          <img src="images/icons/time.png" alt="Проблема времени" />
+          <h3>Мало времени на рассылки</h3>
+          <p>Автоматизация и сценарии в Sendix экономят время: настроив серию писем один раз, сервис отправит их за вас по расписанию.</p>
+        </div>
+        <div class="pain-card">
+          <img src="images/icons/segment.png" alt="Проблема сегментации" />
+          <h3>Нет сегментации аудитории</h3>
+          <p>Умные списки и фильтры позволят отправлять релевантный контент разным группам клиентов, повышая отклик.</p>
+        </div>
+        <div class="pain-card">
+          <img src="images/icons/analytics.png" alt="Проблема аналитики" />
+          <h3>Трудно измерять эффективность</h3>
+          <p>Подробная аналитика (открытия, клики, конверсия) – все метрики доступны в реальном времени в удобном кабинете.</p>
+        </div>
+        <div class="pain-card">
+          <img src="images/icons/cost.png" alt="Проблема бюджета" />
+          <h3>Ограниченный бюджет</h3>
+          <p>Доступные тарифы (в том числе бесплатный план) позволяют использовать Sendix без значительных затрат.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="target">
-  <div class="text">
-    <h2>Кому подойдёт</h2>
-    <ul>
-      <li>Менеджеры по продажам и маркетологи</li>
-      <li>Руководители малого и среднего бизнеса</li>
-      <li>Компании, запускающие новый продукт или услугу</li>
-      <li>B2B‑компании, которым нужно увеличить входящий поток заявок</li>
-      <li>Бренды, которым важно повысить узнаваемость и охват</li>
-    </ul>
-  </div>
-  <img src="https://source.unsplash.com/collection/145103/600x400" alt="" class="illustration"/>
-</section>
+  <section id="who" class="who">
+    <div class="container">
+      <h2>Кому подойдёт Sendix?</h2>
+      <ul class="who-list">
+        <li><img src="images/icons/store.png" alt="" /><span>Интернет-магазины и eCommerce проекты</span></li>
+        <li><img src="images/icons/smb.png" alt="" /><span>Малый и средний бизнес</span></li>
+        <li><img src="images/icons/blogger.png" alt="" /><span>Блогеры и контент-мейкеры</span></li>
+        <li><img src="images/icons/ngo.png" alt="" /><span>Образовательные и некоммерческие организации</span></li>
+        <li><img src="images/icons/community.png" alt="" /><span>Онлайн-сообщества и форумы</span></li>
+      </ul>
+    </div>
+  </section>
 
-<section class="section" id="pricing">
-  <div class="text">
-    <h2>Тарифы</h2>
-    <ul class="pricing">
-      <li><b>5 000 ₽</b> — Рассылка по вашей базе, вашего письма.</li>
-      <li><b>8 000 ₽</b> — Рассылка вашего письма по базе Sendix (3 300 компаний) + отчёт.</li>
-      <li><b>12 000 ₽</b> — Рассылка по базе Sendix + составление индивидуального письма + рекомендации + отчёт.</li>
-      <li><b>от 15 000 ₽</b> — Создание базы под ваши потребности + письмо + рассылка + отчёт.</li>
-    </ul>
-  </div>
-  <img src="https://source.unsplash.com/collection/8358936/600x400" alt="" class="illustration"/>
-</section>
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2>Тарифы</h2>
+      <div class="pricing-plans">
+        <div class="plan">
+          <h3>Базовый</h3>
+          <p class="price">2000 ₽ <span>/ мес</span></p>
+          <ul class="features">
+            <li>До 5 000 подписчиков</li>
+            <li>Неограниченно писем</li>
+            <li>Базовая аналитика</li>
+          </ul>
+          <a href="#" class="btn plan-btn">Выбрать</a>
+        </div>
+        <div class="plan">
+          <h3>Стандарт</h3>
+          <p class="price">5000 ₽ <span>/ мес</span></p>
+          <ul class="features">
+            <li>До 15 000 подписчиков</li>
+            <li>Расширенная аналитика</li>
+            <li>A/B тестирование</li>
+          </ul>
+          <a href="#" class="btn plan-btn">Выбрать</a>
+        </div>
+        <div class="plan highlight">
+          <h3>Оптимальный</h3>
+          <p class="price">8000 ₽ <span>/ мес</span></p>
+          <ul class="features">
+            <li>До 30 000 подписчиков</li>
+            <li>Персональный менеджер</li>
+            <li>Сегментация и автоматизация</li>
+          </ul>
+          <a href="#" class="btn plan-btn">Выбрать</a>
+        </div>
+        <div class="plan">
+          <h3>Премиум</h3>
+          <p class="price">15000 ₽ <span>/ мес</span></p>
+          <ul class="features">
+            <li>Неограниченно подписчиков</li>
+            <li>Приоритетная поддержка</li>
+            <li>Все функции платформы</li>
+          </ul>
+          <a href="#" class="btn plan-btn">Выбрать</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="cases">
-  <div class="text">
-    <h2>Кейсы</h2>
-    <p><b>Кейс 1:</b> Рассылка по базе Sendix…</p>
-    <p><b>Кейс 2:</b> Своя база клиента…</p>
-    <p><b>Кейс 3:</b> Индивидуальный текст + рекомендации…</p>
-    <p><b>Кейс 4:</b> Повышение узнаваемости бренда…</p>
-    <p><b>Кейс 5:</b> Поддержка продаж (второе касание)…</p>
-  </div>
-  <img src="https://source.unsplash.com/collection/381477/600x400" alt="" class="illustration"/>
-</section>
+  <section id="cases" class="cases">
+    <div class="container">
+      <h2>Кейсы</h2>
+      <div class="cases-grid">
+        <div class="case-card">
+          <h3>Онлайн-магазин электроники</h3>
+          <p>Рост конверсии из email-рассылки: <strong>+45%</strong></p>
+          <div class="progress"><div class="progress-bar" style="width:45%;"></div></div>
+        </div>
+        <div class="case-card">
+          <h3>Служба доставки еды</h3>
+          <p>Увеличение базы подписчиков: <strong>+20 000</strong></p>
+          <div class="progress"><div class="progress-bar" style="width:80%;"></div></div>
+        </div>
+        <div class="case-card">
+          <h3>EduTech стартап</h3>
+          <p>Повышение открываемости писем: <strong>до 70%</strong></p>
+          <div class="progress"><div class="progress-bar" style="width:70%;"></div></div>
+        </div>
+        <div class="case-card">
+          <h3>Маркетинговое агентство</h3>
+          <p>Сокращение времени на кампанию: <strong>-50% времени</strong></p>
+          <div class="progress"><div class="progress-bar" style="width:50%;"></div></div>
+        </div>
+        <div class="case-card">
+          <h3>Некоммерческая организация</h3>
+          <p>Привлечение пожертвований через email: <strong>+30%</strong></p>
+          <div class="progress"><div class="progress-bar" style="width:30%;"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="faq">
-  <div class="text">
-    <h2>Часто задаваемые вопросы</h2>
-    <ul>
-      <li><b>Как быстро стартует рассылка?</b> — В течение 24 часов после согласования.</li>
-      <li><b>Можно ли использовать свою базу?</b> — Да, работаем и с вашей, и с нашей базой.</li>
-      <li><b>Какой отчёт вы предоставляете?</b> — Подробный: открытия, клики, ответы и заявки.</li>
-      <li><b>Гарантируете ли доставку писем?</b> — Да, показываем статистику по отправкам.</li>
-    </ul>
-  </div>
-  <img src="https://source.unsplash.com/collection/9163159/600x400" alt="" class="illustration"/>
-</section>
+  <section id="faq" class="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Можно ли импортировать свой список контактов в Sendix?</summary>
+          <p>Да, вы можете легко загрузить существующую базу контактов из CSV-файла или через интеграции с CRM. Sendix автоматически проверит адреса на корректность.</p>
+        </details>
+        <details>
+          <summary>Есть ли бесплатный тариф или пробный период?</summary>
+          <p>Да, у нас предусмотрен бесплатный пробный период 14 дней на полный функционал. Также есть бесплатный тариф с ограниченными возможностями для небольших проектов.</p>
+        </details>
+        <details>
+          <summary>Как обеспечивается доставка писем и обход спам-фильтров?</summary>
+          <p>Мы используем проверенные почтовые сервера, настройку DKIM/SPF, а также анализируем содержание писем. Сервис мониторит репутацию отправителя и дает рекомендации, чтобы письма доходили до получателей.</p>
+        </details>
+        <details>
+          <summary>Можно ли настроить автоматические триггерные рассылки?</summary>
+          <p>Да, Sendix поддерживает автоматизацию: вы можете настроить цепочки писем на основе действий пользователей (регистрация, брошенная корзина и т.д.), которые будут отправляться автоматически по заданным условиям.</p>
+        </details>
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="contacts">
-  <div class="text">
-    <h2>Контакты и заявка</h2>
-    <form>
-      <p><input type="text" placeholder="Имя" required></p>
-      <p><input type="text" placeholder="Телефон / WhatsApp" required></p>
-      <p><textarea placeholder="Сообщение" rows="4"></textarea></p>
-      <p><label><input type="checkbox" required> Я соглашаюсь на обработку персональных данных</label></p>
-      <p><button type="submit">Отправить</button></p>
-    </form>
-    <p>Или пишите напрямую:<br>Email: <a href="mailto:info@sendix.online">info@sendix.online</a><br>WhatsApp: <a href="https://wa.me/79137888449">8‑913‑788‑84‑49</a></p>
-  </div>
-  <img src="https://source.unsplash.com/collection/175083/600x400" alt="" class="illustration"/>
-</section>
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <h2>Контакты</h2>
+      <div class="contact-grid">
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <div class="form-group checkbox-group">
+            <label>
+              <input type="checkbox" name="agree" required />
+              <span>Я согласен с <a href="#">политикой конфиденциальности</a></span>
+            </label>
+          </div>
+          <button type="submit" class="btn">Отправить</button>
+        </form>
+        <div class="contact-info">
+          <p><strong>Email:</strong> <a href="mailto:info@sendix.ru">info@sendix.ru</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/79991234567">+7 (999) 123-45-67</a></p>
+          <p>Мы на связи и ответим вам в течение рабочего дня.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  © 2025 Sendix — Email‑рассылки для бизнеса.
-</footer>
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Sendix. Все права защищены.</p>
+    </div>
+  </footer>
 
+  <!-- Fixed call and WhatsApp buttons -->
+  <a href="tel:+79991234567" class="fixed-btn call-btn" aria-label="Позвонить"></a>
+  <a href="https://wa.me/79991234567" class="fixed-btn whatsapp-btn" aria-label="Написать в WhatsApp"></a>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
 </body>
 </html>
