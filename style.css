@@ -1,6 +1,3 @@
-# Let's create a basic CSS file to style the HTML content.
-
-css_content = """
 /* Basic Reset */
 * {
     margin: 0;
@@ -14,51 +11,30 @@ body {
     color: #333;
 }
 
-/* Fixed Menu */
-.fixed-menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-}
-
-.fixed-menu a {
-    margin: 0 1rem;
-    text-decoration: none;
-    color: #333;
-    font-weight: 700;
-}
-
-/* Hero Section */
-.hero {
-    padding: 8rem 1rem 4rem;
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 2rem;
     text-align: center;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
-.hero h1 {
+header h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
-.hero p {
+header p {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
 .slogan {
     font-style: italic;
-    color: #666;
+    color: #ecf0f1;
 }
 
-/* General Section Styling */
 section {
-    padding: 4rem 1rem;
+    padding: 2rem;
 }
 
 h2 {
@@ -67,17 +43,10 @@ h2 {
     font-size: 2rem;
 }
 
-/* About Section */
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+.about {
+    background: #f9f9f9;
 }
 
-/* Pains Section */
 .pains-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -85,158 +54,15 @@ h2 {
 }
 
 .pain-card {
-    background-color: #fff;
+    background: #fff;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* For Whom Section */
-.for-whom-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.for-whom-item {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.for-whom-item i {
-    margin-right: 1rem;
-    color: #4a90e2;
-}
-
-/* Tariffs Section */
-.tariffs-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.tariff-card {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.tariff-card.highlight {
-    border: 2px solid #4a90e2;
-}
-
-/* Cases Section */
-.cases-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-.case-card {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* FAQ Section */
-.faq-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    margin-bottom: 1rem;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.faq-question {
-    padding: 1rem;
-    background-color: #f5f7fa;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.faq-answer {
-    padding: 1rem;
-    display: none;
-}
-
-/* Contacts Section */
-.contacts-content {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.contact-form button {
-    background-color: #4a90e2;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* Fixed Buttons */
-.fixed-buttons {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    z-index: 1000;
-}
-
-.fixed-buttons a {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #4a90e2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-decoration: none;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
-    background-color: #333;
+    background: #2c3e50;
     color: #fff;
 }
-"""
-
-css_file_path = os.path.join(directory, "styles.css")
-with open(css_file_path, "w", encoding="utf-8") as file:
-    file.write(css_content)
-
-css_file_path
-
