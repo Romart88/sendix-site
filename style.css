@@ -1,51 +1,74 @@
 /* RESET */
 *{box-sizing:border-box;margin:0;padding:0}
 
-/* BASE */
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;color:#000}
+/* BASE ---------------------------------------------------------------- */
+body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;
+    color:#000;
+}
 h1,h2{font-weight:700;margin-bottom:.75rem}
 h1{font-size:clamp(1.8rem,3vw+1rem,2.4rem)}
 h2{font-size:clamp(1.5rem,2vw+1rem,2rem)}
 
-/* NAVBAR */
-header{position:sticky;top:0;background:#fff;z-index:1000;border-bottom:1px solid #eee}
-.top-bar ul{list-style:none;display:flex;gap:20px;padding:8px 20px}
+/* NAVBAR -------------------------------------------------------------- */
+header{
+    position:sticky;
+    top:0;
+    background:#fff;
+    z-index:1000;
+    border-bottom:1px solid #eee;
+}
+.top-bar ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+    padding:8px 20px;
+}
 .top-bar{justify-content:flex-start;padding-left:20px}
 .top-bar a{text-decoration:none;color:#007bff;font-weight:600}
 .top-bar a:hover{color:#0056b3}
 
+/* ---------------- HERO BLOCK ---------------------------------------- */
 .hero-block{
-    position:sticky;          /* «прилипает» под меню */
-    top:48px;                 /* столько же, сколько высота top-bar */
+    position:sticky;              /* «прилипает» под меню */
+    top:48px;                     /* высота меню */
     z-index:900;
     background:#fff;
-    padding:6px 0 8px;       /* меньше воздуха сверху-снизу */
+    text-align:center;
+    padding:0 0 12px;             /* меньше воздуха сверху, 12 px снизу */
     border-bottom:1px solid #eee;
 }
-
-/* расстояние logo ↔ текст = 6 px */
+.hero-inner{max-width:720px;margin:0 auto}
 .hero-block .logo{display:block;max-width:200px;height:auto;margin:0 auto 6px}
 
-/* типографика */
-.hero-block h1   {font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:.25rem}
-.hero-block .lead{font-size:.95rem;margin-bottom:.20rem;font-weight:500}
-.hero-block strong{font-size:.9rem;font-weight:600}
+/* типографика ---------------------------------------------------------*/
+.hero-block h1  {font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:.25rem}
+.hero-block .lead   {font-size:.95rem;margin-bottom:.20rem;font-weight:500}
+.hero-block strong  {font-size:.9rem;font-weight:600}
 
-/* быстрые кнопки теперь ТОЛЬКО в hero */
+/* КНОПКИ быстрого контакта внутри hero --------------------------------*/
 .hero-block .fixed-buttons{
-    position:absolute;   /* относительно hero-block */
-    top:4px;             /* прижимаем под шапку */
-    right:20px;
-    display:flex;flex-direction:column;gap:8px
+    position:absolute;    /* относительно hero-block */
+    top:8px;              /* прижимаем под шапку */
+    right:24px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
 }
 .hero-block .fixed-buttons a{
-    width:40px;height:40px;border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    background:#007bff       /* синий телефон по умолчанию */
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#007bff;          /* по умолчанию телефон синий */
 }
-.hero-block .fixed-buttons a:last-child{background:#25D366} /* зелёный WhatsApp */
-.hero-block .fixed-buttons img{width:20px;height:20px}
-/* Z sections */
+.hero-block .fixed-buttons a:last-child{background:#25D366} /* WhatsApp зелёный */
+.hero-block .fixed-buttons img{width:24px;height:24px}
+
+/* ----- остальные секции ------------------------------------------------*/
 .section{display:flex;align-items:center;gap:40px;padding:64px 6vw}
 .section:nth-child(odd){background:#fff}
 .section:nth-child(even){background:#f5f5f5;flex-direction:row-reverse}
@@ -55,8 +78,6 @@ header{position:sticky;top:0;background:#fff;z-index:1000;border-bottom:1px soli
 /* Lists */
 ol,ul{margin-left:1.2rem}
 li+li{margin-top:.4rem}
-
-
 
 /* Footer */
 footer{background:#111;color:#fff;text-align:center;padding:20px;font-size:.9rem}
