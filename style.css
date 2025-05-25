@@ -1,496 +1,242 @@
-html {
-  scroll-behavior: smooth;
+# Let's create a basic CSS file to style the HTML content.
+
+css_content = """
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-  font-family: 'Inter', Arial, sans-serif;
-  margin: 0;
-  color: #333;
-  background: #fff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-h1, h2, h3 {
-  font-weight: 600;
-  margin: 0 0 20px;
-}
-h1 { font-size: 2.5rem; }
-h2 { font-size: 1.75rem; }
-h3 { font-size: 1.375rem; }
-p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0 0 1em;
-}
-.btn {
-  display: inline-block;
-  background-color: #e64a4a;
-  color: #fff;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: background-color 0.3s;
-}
-.btn:hover {
-  background-color: #c43d3d;
-}
-/* Navigation */
-.top-nav {
-  background: #fff;
-  border-bottom: 1px solid #e5e5e5;
-  position: fixed;
-  top: 0; width: 100%;
-  z-index: 1000;
-}
-.top-nav .nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-}
-.top-nav .logo img {
-  height: 40px;
-}
-.top-nav .menu {
-  list-style: none;
-  margin: 0; padding: 0;
-  display: flex;
-}
-.top-nav .menu li {
-  margin-left: 20px;
-}
-.top-nav .menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-.top-nav .menu a:hover {
-  color: #e64a4a;
-}
-.top-nav .nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-@media (max-width: 768px) {
-  .top-nav .menu {
-    display: none;
-    position: absolute;
-    top: 60px; right: 0;
-    background: #fff;
-    flex-direction: column;
+
+/* Fixed Menu */
+.fixed-menu {
+    position: fixed;
+    top: 0;
     width: 100%;
-    border-bottom: 1px solid #e5e5e5;
-  }
-  .top-nav .menu.open {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 1000;
     display: flex;
-  }
-  .top-nav .menu li {
-    margin: 10px 0;
-    text-align: center;
-  }
-  .top-nav .nav-toggle {
-    display: block;
-  }
+    justify-content: center;
 }
-/* Hero section */
+
+.fixed-menu a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+/* Hero Section */
 .hero {
-  min-height: 80vh;
-  background: linear-gradient(45deg, #fdfdfd, #f1f1f1);
-  background-size: 400% 400%;
-  animation: gradientShift 10s infinite alternate;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-.hero-container {
-  padding: 100px 20px;
-}
-.hero h1 {
-  margin-bottom: 20px;
-}
-.hero .subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #555;
-}
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-/* About section */
-.about {
-  background: #f9f9f9;
-  text-align: center;
-  padding: 60px 0;
-}
-.about h2 { margin-bottom: 40px; }
-.about-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-}
-.about-card .about-icon {
-  width: 80px;
-  margin-right: 20px;
-}
-.about-card p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-@media (max-width: 600px) {
-  .about-card {
-    flex-direction: column;
+    padding: 8rem 1rem 4rem;
     text-align: center;
-  }
-  .about-card .about-icon {
-    margin: 0 0 20px;
-  }
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
-/* Pains section */
-.pains {
-  padding: 60px 0;
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
-.pains h2 {
-  text-align: center;
-  margin-bottom: 40px;
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
-.pains-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+
+.slogan {
+    font-style: italic;
+    color: #666;
 }
+
+/* General Section Styling */
+section {
+    padding: 4rem 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* About Section */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Pains Section */
+.pains-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
 .pain-card {
-  background: #fff;
-  border: 1px solid #ececec;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-.pain-card img {
-  width: 50px;
-  margin-bottom: 15px;
+
+/* For Whom Section */
+.for-whom-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
 }
-.pain-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #e64a4a;
-}
-.pain-card p {
-  font-size: 0.95rem;
-  color: #555;
-}
-.pain-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-/* Who section */
-.who {
-  background: #f9f9f9;
-  padding: 60px 0;
-}
-.who h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.who-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 800px;
-}
-.who-list li {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  margin: 10px 0;
-}
-.who-list img {
-  width: 30px;
-  margin-right: 15px;
-}
-/* Pricing section */
-.pricing {
-  padding: 60px 0;
-  text-align: center;
-}
-.pricing h2 { margin-bottom: 40px; }
-.pricing-plans {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-.plan {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  flex: 1 1 200px;
-  max-width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.plan h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-.plan .price {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-.plan .price span {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #555;
-}
-.plan .features {
-  text-align: left;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px;
-}
-.plan .features li {
-  margin-bottom: 5px;
-  position: relative;
-  padding-left: 20px;
-}
-.plan .features li:before {
-  content: "✓";
-  color: #4caf50;
-  position: absolute;
-  left: 0;
-}
-.plan-btn {
-  margin-top: auto;
-}
-.plan:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-.plan.highlight {
-  border: 2px solid #e64a4a;
-  position: relative;
-}
-@media (max-width: 800px) {
-  .pricing-plans {
-    flex-direction: column;
+
+.for-whom-item {
+    display: flex;
     align-items: center;
-  }
-  .plan {
-    max-width: 100%;
-  }
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-/* Cases section */
-.cases {
-  background: #f9f9f9;
-  padding: 60px 0;
+
+.for-whom-item i {
+    margin-right: 1rem;
+    color: #4a90e2;
 }
-.cases h2 {
-  text-align: center;
-  margin-bottom: 40px;
+
+/* Tariffs Section */
+.tariffs-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
 }
-.cases-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+
+.tariff-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
+
+.tariff-card.highlight {
+    border: 2px solid #4a90e2;
+}
+
+/* Cases Section */
+.cases-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
 .case-card {
-  background: #fff;
-  border: 1px solid #ececec;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-.case-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+
+/* FAQ Section */
+.faq-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
-.case-card p {
-  font-size: 0.95rem;
-  margin-bottom: 15px;
-  color: #333;
+
+.faq-item {
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-.case-card p strong {
-  font-weight: 600;
-  color: #000;
+
+.faq-question {
+    padding: 1rem;
+    background-color: #f5f7fa;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.progress {
-  background: #eee;
-  border-radius: 5px;
-  overflow: hidden;
-  height: 10px;
-  width: 100%;
-  margin: 0 auto;
+
+.faq-answer {
+    padding: 1rem;
+    display: none;
 }
-.progress-bar {
-  background: #e64a4a;
-  height: 100%;
-  width: 0;
+
+/* Contacts Section */
+.contacts-content {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-/* (Note: width is set inline in HTML for each case) */
-/* FAQ section */
-.faq {
-  padding: 60px 0;
-}
-.faq h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.faq-list {
-  max-width: 800px;
-  margin: 0 auto;
-}
-.faq-list details {
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px 15px;
-  background: #fefefe;
-}
-.faq-list summary {
-  font-weight: 600;
-  cursor: pointer;
-  position: relative;
-  list-style: none;
-}
-.faq-list summary::marker {
-  content: "";
-}
-.faq-list summary::after {
-  content: "➕";
-  position: absolute;
-  right: 0;
-  font-size: 18px;
-}
-.faq-list details[open] summary::after {
-  content: "➖";
-}
-.faq-list details p {
-  margin: 10px 0 0;
-  line-height: 1.5;
-}
-/* Contacts section */
-.contacts {
-  padding: 60px 0;
-}
-.contacts h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-.contact-grid {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-.contact-form {
-  flex: 1 1 400px;
-  max-width: 500px;
-}
-.contact-form .form-group {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-}
-.contact-form label {
-  font-size: 0.9rem;
-  margin-bottom: 5px;
-}
+
 .contact-form input,
 .contact-form textarea {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: inherit;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
-.contact-form textarea {
-  resize: vertical;
+
+.contact-form button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
 }
-.contact-form .checkbox-group {
-  flex-direction: row;
-  align-items: center;
-}
-.contact-form .checkbox-group label {
-  font-size: 0.8rem;
-  font-weight: 400;
-  cursor: pointer;
-}
-.contact-form .checkbox-group input[type="checkbox"] {
-  margin-right: 5px;
-}
-.contact-form .checkbox-group a {
-  text-decoration: underline;
-  color: #333;
-}
-.contact-info {
-  flex: 1 1 200px;
-  font-size: 0.95rem;
-}
-.contact-info p {
-  margin-bottom: 10px;
-}
-.contact-info a {
-  color: #e64a4a;
-  text-decoration: none;
-}
-@media (max-width: 600px) {
-  .contact-grid {
+
+/* Fixed Buttons */
+.fixed-buttons {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
     flex-direction: column;
-  }
-  .contact-form, .contact-info {
-    max-width: 100%;
-  }
-  .contact-info {
-    margin-top: 30px;
-  }
+    gap: 1rem;
+    z-index: 1000;
 }
+
+.fixed-buttons a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4a90e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Footer */
-.footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #333;
+    color: #fff;
 }
-.footer p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-/* Fixed call & WhatsApp buttons */
-.fixed-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px; height: 50px;
-  border-radius: 50%;
-  background-color: #e64a4a;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  z-index: 1001;
-}
-.call-btn {
-  background: #e64a4a url('images/icon_phone.png') no-repeat center;
-  background-size: 60%;
-}
-.whatsapp-btn {
-  right: 80px;
-  background: #25d366 url('images/icon_whatsapp.png') no-repeat center;
-  background-size: 60%;
-}
+"""
+
+css_file_path = os.path.join(directory, "styles.css")
+with open(css_file_path, "w", encoding="utf-8") as file:
+    file.write(css_content)
+
+css_file_path
+
