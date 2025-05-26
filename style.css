@@ -1,152 +1,160 @@
-/* ==== БАЗОВЫЙ СТИЛЬ Sendix v1 ==== */
-
 body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #f9f9f9;
-  color: #111;
-  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #222;
 }
 
-h1, h2, h3, h4, h5 {
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-ul {
-  padding-left: 1.2rem;
-  margin: 0 0 1rem 0;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-/* ==== НАВИГАЦИЯ ==== */
 header {
-  background: #ffffff;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
-
 nav ul {
-  margin: 0;
-  padding: 1rem;
+  list-style: none;
   display: flex;
   justify-content: center;
-  list-style: none;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
 }
-
 nav a {
   text-decoration: none;
-  color: #0d6efd;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #084298;
-}
-
-/* ==== СЕКЦИИ ==== */
-.section {
-  padding: 60px 20px;
-}
-
-.section.alt {
-  background-color: #f4f6f8;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.container .text {
-  flex: 1 1 100%;
-}
-
-/* ==== Z-структура ==== */
-.z-left .text {
-  flex: 1 1 50%;
-  text-align: left;
-}
-
-.z-left .image {
-  flex: 1 1 50%;
-  text-align: center;
-}
-
-.z-right .text {
-  flex: 1 1 50%;
-  text-align: right;
-}
-
-.z-right .image {
-  flex: 1 1 50%;
-  text-align: center;
-}
-
-/* ==== HERO ==== */
-.hero {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #e9f0ff, #f8fbff);
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 36px;
-  color: #0d6efd;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 20px;
-  color: #333;
-}
-
-.hero strong {
-  display: block;
-  margin-top: 1rem;
   color: #000;
   font-weight: 600;
 }
 
-/* ==== FOOTER ==== */
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+.hero img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+.hero-text h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.hero-text p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.hero strong {
+  display: block;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.fab {
+  position: fixed;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  z-index: 1000;
+}
+.fab.call { right: 80px; }
+.fab.wa { right: 20px; }
+.fab img { width: 100%; }
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+h2 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.item {
+  flex: 1 1 calc(33% - 20px);
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.item img {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.for-whom ul {
+  list-style: disc;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.tariff-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.tariff {
+  flex: 1 1 calc(25% - 20px);
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.case {
+  margin-bottom: 20px;
+  background: #fefefe;
+  padding: 15px;
+  border-left: 4px solid #007bff;
+}
+
+.faq ul {
+  list-style: none;
+  padding: 0;
+}
+.faq li {
+  margin-bottom: 15px;
+}
+
+.contacts form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+.contacts input,
+.contacts textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.contacts button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.contacts button:hover {
+  background: #0056b3;
+}
+
 footer {
   background: #111;
   color: #fff;
   text-align: center;
   padding: 20px;
-  font-size: 14px;
-}
-
-/* ==== АДАПТИВ ==== */
-@media (max-width: 768px) {
-  .z-left .text,
-  .z-right .text {
-    text-align: left;
-  }
-  .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero h1 {
-    font-size: 28px;
-  }
-  .hero p {
-    font-size: 18px;
-  }
 }
