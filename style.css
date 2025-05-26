@@ -1,272 +1,136 @@
-/* Базовая типографика и фон */
+/* ==== БАЗОВЫЙ СТИЛЬ Sendix v1 ==== */
+
 body {
-  font-family: 'Inter', sans-serif;
   margin: 0;
-  padding: 0;
-  font-size: 16px;
-  line-height: 1.6;
-  background: #f8f9fa;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
   color: #111;
+  line-height: 1.6;
 }
 
-h1 {
-  font-size: 38px;
-  margin-bottom: 10px;
-}
-h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-h3 {
-  font-size: 22px;
-}
-h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-/* Навигация */
+ul {
+  padding-left: 1.2rem;
+  margin: 0 0 1rem 0;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* ==== НАВИГАЦИЯ ==== */
 header {
-  background: #fff;
-  padding: 20px 0;
+  background: #ffffff;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
 }
+
 nav ul {
-  list-style: none;
+  margin: 0;
+  padding: 1rem;
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
+  list-style: none;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
+
 nav a {
   text-decoration: none;
   color: #0d6efd;
   font-weight: 600;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
+
 nav a:hover {
-  color: #0a58ca;
+  color: #084298;
 }
 
-/* Главный блок */
-.hero {
-  background: linear-gradient(135deg, #e9f0ff, #f8fbff);
-  text-align: center;
-  padding: 80px 20px 60px;
-}
-.hero img {
-  max-width: 160px;
-  margin-bottom: 20px;
-}
-.hero-text h1 {
-  color: #0d6efd;
-}
-.hero strong {
-  display: block;
-  font-weight: 600;
-  color: #333;
-  margin-top: 10px;
-}
-
-/* Фиксированные кнопки */
-.fab {
-  position: fixed;
-  bottom: 20px;
-  width: 56px;
-  height: 56px;
-  z-index: 1000;
-}
-.fab.call { right: 80px; }
-.fab.wa { right: 20px; }
-.fab img { width: 100%; }
-
-/* Чередование секций */
-section:nth-child(even) {
-  background: #f4f6f8;
-}
-section {
+/* ==== СЕКЦИИ ==== */
+.section {
   padding: 60px 20px;
+}
+
+.section.alt {
+  background-color: #f4f6f8;
+}
+
+.container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-/* Проблемы — сетка */
-.grid {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
 }
-.item {
-  flex: 1 1 calc(33% - 20px);
-  background: white;
-  border-radius: 10px;
-  padding: 25px;
+
+.container .text {
+  flex: 1 1 100%;
+}
+
+/* ==== Z-структура ==== */
+.z-left .text {
+  text-align: left;
+}
+
+.z-right .text {
+  text-align: right;
+}
+
+/* ==== HERO ==== */
+.hero {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #e9f0ff, #f8fbff);
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: 0.3s;
-}
-.item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-}
-.item img {
-  width: 50px;
-  margin-bottom: 15px;
 }
 
-/* Кому подойдёт */
-.for-whom ul {
-  list-style: disc;
-  max-width: 600px;
-  margin: 0 auto;
-  padding-left: 20px;
+.hero h1 {
+  font-size: 36px;
+  color: #0d6efd;
+  margin-bottom: 10px;
 }
 
-/* Тарифы */
-.tariff-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.tariff {
-  flex: 1 1 calc(25% - 20px);
-  background: #fff;
-  border-radius: 10px;
-  padding: 25px;
-  text-align: center;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-  border-top: 4px solid #0d6efd;
+.hero p {
+  font-size: 20px;
+  color: #333;
 }
 
-/* Кейсы */
-.case {
-  background: #fff;
-  padding: 20px;
-  border-left: 4px solid #0d6efd;
-  margin-bottom: 20px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.04);
-}
-
-/* FAQ */
-.faq ul {
-  list-style: none;
-  padding: 0;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.faq li {
-  background: #fff;
-  margin-bottom: 12px;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-}
-
-/* Контакты */
-.contacts form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-  margin: 0 auto 30px;
-}
-.contacts input,
-.contacts textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-}
-.contacts button {
-  padding: 12px;
-  background: #0d6efd;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
+.hero strong {
+  display: block;
+  margin-top: 1rem;
+  color: #000;
   font-weight: 600;
 }
-.contacts button:hover {
-  background: #0a58ca;
-}
 
-/* Подвал */
+/* ==== FOOTER ==== */
 footer {
   background: #111;
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 20px;
   font-size: 14px;
 }
-@media (max-width: 992px) {
-  .grid {
+
+/* ==== АДАПТИВ ==== */
+@media (max-width: 768px) {
+  .z-left .text,
+  .z-right .text {
+    text-align: left;
+  }
+  .container {
     flex-direction: column;
+    align-items: flex-start;
   }
-
-  .item,
-  .tariff {
-    flex: 1 1 100%;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 10px;
-  }
-
-  .hero-text h1 {
-    font-size: 28px;
-  }
-
-  .hero-text p {
-    font-size: 18px;
-  }
-
-  .tariff-grid {
-    flex-direction: column;
-  }
-
-  .fab {
-    width: 48px;
-    height: 48px;
-  }
-
-  .fab.call { right: 70px; }
-  .fab.wa { right: 15px; }
-}
-
-@media (max-width: 576px) {
-  .hero {
-    padding: 50px 15px;
-  }
-
-  .contacts form {
-    width: 100%;
-    padding: 0 10px;
-  }
-
-  .hero img {
-    max-width: 120px;
-  }
-
-  .hero-text h1 {
-    font-size: 22px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
   nav ul {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+  }
+  .hero h1 {
+    font-size: 28px;
   }
 }
