@@ -205,3 +205,68 @@ footer {
   padding: 20px;
   font-size: 14px;
 }
+@media (max-width: 992px) {
+  .grid {
+    flex-direction: column;
+  }
+
+  .item,
+  .tariff {
+    flex: 1 1 100%;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .tariff-grid {
+    flex-direction: column;
+  }
+
+  .fab {
+    width: 48px;
+    height: 48px;
+  }
+
+  .fab.call { right: 70px; }
+  .fab.wa { right: 15px; }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 50px 15px;
+  }
+
+  .contacts form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .hero img {
+    max-width: 120px;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
