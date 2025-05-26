@@ -75,28 +75,24 @@ nav a:hover {
 }
 
 /* ==== Z-структура ==== */
-.z-left {
-  flex-direction: row;
-}
-
-.z-right {
-  flex-direction: row-reverse;
-}
-
-.z-left .text, .z-right .text {
+.z-left .text {
   flex: 1 1 50%;
-  padding: 20px;
+  text-align: left;
 }
 
-.z-left .image, .z-right .image {
+.z-left .image {
   flex: 1 1 50%;
   text-align: center;
 }
 
-.z-left .image img, .z-right .image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
+.z-right .text {
+  flex: 1 1 50%;
+  text-align: right;
+}
+
+.z-right .image {
+  flex: 1 1 50%;
+  text-align: center;
 }
 
 /* ==== HERO ==== */
@@ -135,28 +131,21 @@ footer {
 
 /* ==== АДАПТИВ ==== */
 @media (max-width: 768px) {
-  .z-left,
-  .z-right {
-    flex-direction: column;
-  }
-
   .z-left .text,
-  .z-right .text,
-  .z-left .image,
-  .z-right .image {
-    flex: 1 1 100%;
+  .z-right .text {
     text-align: left;
   }
-
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   nav ul {
     flex-direction: column;
     align-items: center;
   }
-
   .hero h1 {
     font-size: 28px;
   }
-
   .hero p {
     font-size: 18px;
   }
