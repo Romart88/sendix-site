@@ -67,6 +67,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 40px;
 }
 
 .container .text {
@@ -132,5 +133,8 @@ footer {
   }
   .hero h1 {
     font-size: 28px;
+  }
+  .hero p {
+    font-size: 18px;
   }
 }
