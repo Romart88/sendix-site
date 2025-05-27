@@ -209,10 +209,10 @@ section:last-of-type { margin-bottom: 0; }
 }
 
 .problems-title-icon {
-  height: 2.6em; /* Пропорционально размеру шрифта заголовка */
+  height: 5.2em; /* Было 2.6em, стало в 2 раза больше */
   width: auto;
-  min-width: 48px;
-  max-width: 70px;
+  min-width: 96px;
+  max-width: 140px;
   object-fit: contain;
   display: block;
 }
@@ -472,7 +472,7 @@ footer {
   right: 1.2rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 38px;
+  width: 76;
   height: 38px;
   object-fit: contain;
   z-index: 2;
