@@ -472,8 +472,8 @@ footer {
   right: 1.2rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 76;
-  height: 38px;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
   z-index: 2;
   pointer-events: none;
@@ -482,7 +482,7 @@ footer {
 .problem-content--with-img h4,
 .problem-content--with-img .problem-desc,
 .problem-content--with-img .problem-solution {
-  margin-right: 54px; /* чтобы текст не налезал на иконку */
+  margin-right: 90px; /* увеличить отступ под большую иконку */
 }
 
 .problem-solution strong {
@@ -492,14 +492,18 @@ footer {
 }
 
 @media (max-width: 700px) {
+  .problem-icon svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
   .problem-side-img {
-    width: 28px;
-    height: 28px;
+    width: 38px;
+    height: 38px;
     right: 0.7rem;
   }
   .problem-content--with-img h4,
   .problem-content--with-img .problem-desc,
   .problem-content--with-img .problem-solution {
-    margin-right: 36px;
+    margin-right: 44px;
   }
 }
