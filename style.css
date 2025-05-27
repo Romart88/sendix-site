@@ -44,44 +44,108 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
 .hero-block {
   width: 100%;
   background: #eaf3fb;
-  padding: var(--space-xl) 0;
-  display: flex; justify-content: center; align-items: center;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero-inner {
-  width: 100%; max-width: 75rem; margin: 0 var(--space-md); display: flex; flex-direction: column; align-items: center;
-  background: rgba(255,255,255,0.92); border-radius: var(--radius-lg); box-shadow: 0 .5rem 2.5rem var(--color-shadow); padding: var(--space-xl) var(--space-md);
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 440px;
+  margin: 0 auto;
+  border-radius: 2rem;
+  overflow: hidden;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 0.5rem 2.5rem rgba(30,41,59,0.08);
 }
 @media (min-width: 901px) {
   .hero-inner { flex-direction: row; padding: var(--space-xl) var(--space-lg); }
 }
-.hero-about {
-  flex: 0 0 auto; display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-lg);
+.hero-logo-side {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf3fb;
+  min-height: 320px;
 }
 .header-logo {
-  width: 6rem; height: 6rem; background: linear-gradient(135deg, var(--color-primary) 60%, var(--color-primary-dark) 100%);
-  padding: var(--space-md); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; box-shadow: 0 .25rem 1rem rgba(0,0,0,0.1);
+  width: 60%;
+  max-width: 320px;
+  aspect-ratio: 1/1;
+  background: linear-gradient(135deg, #0d6efd 60%, #0056b3 100%);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(13,110,253,0.10);
+  padding: 2rem;
 }
-.header-logo img { width: 100%; height: auto; display: block; }
+.header-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  background: transparent;
+}
 
 /* Hero content */
-.hero-content {
-  flex: 1 1 0; display: flex; flex-direction: column; align-items: flex-start; padding: var(--space-lg); margin-left: var(--space-lg);
+.hero-content-side {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 3rem 2rem 2rem 2rem;
+  background: transparent;
 }
 @media (max-width: 900px) {
-  .hero-content { margin-left: 0; align-items: center; padding: var(--space-lg) var(--space-sm); }
+  .hero-content-side {
+    width: 100%;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    align-items: center;
+  }
 }
 .about-card-hero {
-  width: 100%; max-width: 480px; background: var(--color-surface); color: #23272f; border-radius: var(--radius-md);
-  box-shadow: 0 .125rem .75rem rgba(30,41,59,0.07); padding: 1.5rem 1.25rem; margin-bottom: var(--space-lg);
+  background: #fff;
+  color: #23272f;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+  padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  max-width: 480px;
 }
-.hero-content h1 {
-  font-size: 2.4rem; font-weight: 700; color: #fff; margin-bottom: var(--space-md); font-family: var(--font-base);
+.about-card-hero h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
 }
-.hero-content .subtitle {
-  font-size: 1.25rem; font-weight: 400; color: #374151; margin-bottom: var(--space-md);
+.hero-main-text {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.hero-main-text h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #23272f;
+  margin-bottom: 1.2rem;
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
 }
 .hero-claim strong {
-  color: var(--color-primary); font-size: 1.1rem; font-weight: 600;
+  color: #007bff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: block;
+  margin-top: 0.5rem;
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
 }
 
 /* Section spacing */
