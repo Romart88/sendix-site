@@ -28,7 +28,18 @@ body {
 /* Header & nav */
 header { background: var(--color-surface); box-shadow: 0 2px 8px var(--color-shadow); position: sticky; top: 0; z-index: 100; }
 nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: center; }
-.nav-toggle { display: none; background: none; border: none; font-size: 2rem; color: var(--color-surface); cursor: pointer; }
+.nav-toggle {
+  color: #23272f;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.3em 0.7em;
+  transition: color 0.2s;
+}
+.nav-toggle:focus {
+  outline: 2px solid #0d6efd;
+}
 #main-nav { display: flex; gap: var(--space-lg); list-style: none; }
 #main-nav li a { color: var(--color-primary); font-weight: 600; text-decoration: none; transition: color .2s; }
 #main-nav li a:hover { color: var(--color-primary-dark); text-decoration: underline; }
@@ -135,11 +146,11 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
   margin: 0 auto;
 }
 .header-logo img {
-  width: 100%;
+  width: 200px;    /* увеличено в 2 раза, если было 100px */
   height: auto;
   display: block;
-  border-radius: 1rem;
-  background: transparent;
+  /* Если у логотипа прозрачный фон, можно добавить фон для контраста */
+  /* background: #fff; */
 }
 
 /* Hero content */
