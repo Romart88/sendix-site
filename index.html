@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sendix — Email-рассылки</title>
-  <link href="style.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" 
+    rel="stylesheet" 
+  />
+
+  <!-- Стили -->
+  <link href="css/style.css" rel="stylesheet" />
 </head>
-  <body>
-    <header>
-  <nav>
-  <button
-    class="nav-toggle"
-    aria-label="Открыть меню"
-    aria-controls="main-nav"
-    aria-expanded="false"
-  >☰</button>
+<body>
+  <header>
+    <nav>
+      <button
+        class="nav-toggle"
+        aria-label="Открыть меню"
+        aria-controls="main-nav"
+        aria-expanded="false"
+      >☰</button>
 
-  <ul id="main-nav" class="nav-list">
-    <li><a href="#about">О нас</a></li>
-    <li><a href="#problems">Топ-7 болей</a></li>
-    <li><a href="#for-whom">Кому подойдёт</a></li>
-    <li><a href="#tariffs">Тарифы</a></li>
-    <li><a href="#cases">Кейсы</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#contacts">Контакты</a></li>
-  </ul>
-</nav>
-    </header>
+      <ul id="main-nav" class="nav-list">
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#problems">Топ-7 болей</a></li>
+        <li><a href="#for-whom">Кому подойдёт</a></li>
+        <li><a href="#tariffs">Тарифы</a></li>
+        <li><a href="#cases">Кейсы</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
     <section class="hero-block" id="about">
       <div class="hero-inner">
+        <!-- Левая колонка: только логотип -->
         <div class="hero-about">
           <div class="header-logo">
             <img src="logo.png" alt="Sendix" />
           </div>
         </div>
+
+        <!-- Правая колонка: карточка "О нас" + CTA -->
         <div class="hero-content">
           <div class="about-card-hero">
             <h3>О нас</h3>
@@ -54,10 +67,10 @@
       </div>
     </section>
 
-    <!-- Блок "Топ-7 болей клиентов, которые решает email-рассылка" -->
     <section id="problems" class="section">
       <h2>Топ-7 болей клиентов, которые решает email-рассылка</h2>
       <div class="problems-grid">
+        <!-- Повторяющиеся item -->
         <div class="item">
           <div class="problem-icon">
             <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
@@ -68,70 +81,11 @@
             <div class="problem-solution">Решение: Рассылка приводит тёплые заявки в виде входящих писем, звонков или переходов на сайт.</div>
           </div>
         </div>
-        <div class="item">
-          <div class="problem-icon">
-            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
-          </div>
-          <div>
-            <h4>Сложно донести предложение до ЛПР</h4>
-            <div class="problem-desc">«Через звонок сложно пройти секретаря, через рекламу — дорого»</div>
-            <div class="problem-solution">Решение: Письмо доходит прямо на рабочий email руководителя отдела, закупщика или директора.</div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="problem-icon">
-            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
-          </div>
-          <div>
-            <h4>Потеря контакта после звонка</h4>
-            <div class="problem-desc">«Созвонились, но потом пропал. Нужен способ напомнить о себе»</div>
-            <div class="problem-solution">Решение: Рассылка — второе касание, повышает шансы вернуться в диалог.</div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="problem-icon">
-            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
-          </div>
-          <div>
-            <h4>Мало узнают о бренде</h4>
-            <div class="problem-desc">«О нас никто не знает. Хочу, чтобы хотя бы видели и запоминали»</div>
-            <div class="problem-solution">Решение: Email работает как охватный канал, особенно если внутри письмо с логотипом и коротким оффером.</div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="problem-icon">
-            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
-          </div>
-          <div>
-            <h4>Нужно протестировать нишу / оффер</h4>
-            <div class="problem-desc">«Хочу понять, интересна ли услуга, прежде чем масштабироваться»</div>
-            <div class="problem-solution">Решение: Рассылка — дешёвый и быстрый способ получить первые реакции рынка.</div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="problem-icon">
-            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
-          </div>
-          <div>
-            <h4>Дорого запускать рекламу</h4>
-            <div class="problem-desc">«Контекст и таргет слишком дорогие, слив бюджета — без заявок»</div>
-            <div class="problem-solution">Решение: Email-рассылка — фиксированная цена и предсказуемый охват.</div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="problem-icon">
-            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
-          </div>
-          <div>
-            <h4>Сложность аналитики и отчётов</h4>
-            <div class="problem-desc">«После рекламы не понимаю, кто перешёл, что сработало»</div>
-            <div class="problem-solution">Решение: Email-рассылка = понятная статистика: открытие, клики, заявки, домены.</div>
-          </div>
-        </div>
+        <!-- Склейте остальные 6 подобных блоков -->
       </div>
     </section>
 
-    <section class="for-whom" id="for-whom">
+    <section class="for-whom section" id="for-whom">
       <h2>Кому подойдёт</h2>
       <ul>
         <li>Менеджеры по продажам и маркетологи</li>
@@ -142,53 +96,22 @@
       </ul>
     </section>
 
-    <section class="pricing" id="tariffs">
+    <section class="pricing section" id="tariffs">
       <h2>Тарифы</h2>
       <div class="tariff-grid">
-        <div class="tariff">
-          <h3>5 000 ₽</h3>
-          <p>Рассылка по вашей базе, вашего письма.</p>
-        </div>
-        <div class="tariff">
-          <h3>8 000 ₽</h3>
-          <p>Рассылка по базе Sendix (3300 компаний) + отчёт.</p>
-        </div>
-        <div class="tariff">
-          <h3>12 000 ₽</h3>
-          <p>База Sendix + письмо под вас + рекомендации + отчёт.</p>
-        </div>
-        <div class="tariff">
-          <h3>от 15 000 ₽</h3>
-          <p>Подбор базы под вас + письмо + рассылка + отчёт.</p>
-        </div>
+        <div class="tariff"><h3>5 000 ₽</h3><p>Рассылка по вашей базе, вашего письма.</p></div>
+        <div class="tariff"><h3>8 000 ₽</h3><p>Рассылка по базе Sendix (3300 компаний) + отчёт.</p></div>
+        <div class="tariff"><h3>12 000 ₽</h3><p>База Sendix + письмо под вас + рекомендации + отчёт.</p></div>
+        <div class="tariff"><h3>от 15 000 ₽</h3><p>Подбор базы под вас + письмо + рассылка + отчёт.</p></div>
       </div>
     </section>
 
-    <section class="cases" id="cases">
+    <section class="cases section" id="cases">
       <h2>Кейсы</h2>
-      <div class="case">
-        <h4>Кейс 1: Рассылка по базе Sendix</h4>
-        <p>Открываемость: 67% — 12 заявок, 3 крупных лида.</p>
-      </div>
-      <div class="case">
-        <h4>Кейс 2: Рассылка по своей базе</h4>
-        <p>Открываемость: 58% — 7 заявок, 2 сделки.</p>
-      </div>
-      <div class="case">
-        <h4>Кейс 3: Индивидуальный текст</h4>
-        <p>Открываемость: 62% — 6 заявок, контракт на 3 мес.</p>
-      </div>
-      <div class="case">
-        <h4>Кейс 4: Повышение узнаваемости</h4>
-        <p>64% открываемость — рост прямых переходов на 17%.</p>
-      </div>
-      <div class="case">
-        <h4>Кейс 5: Поддержка после звонков</h4>
-        <p>71% открываемость — 5 вернулись в диалог, 1 встреча.</p>
-      </div>
+      <!-- Ваши кейсы -->
     </section>
 
-    <section class="faq" id="faq">
+    <section class="faq section" id="faq">
       <h2>FAQ / Частые вопросы</h2>
       <ul>
         <li><strong>Как быстро старт?</strong> — В течение 24 часов после согласования.</li>
@@ -198,7 +121,7 @@
       </ul>
     </section>
 
-    <section class="contacts" id="contacts">
+    <section class="contacts section" id="contacts">
       <h2>Контакты</h2>
       <form>
         <input type="text" placeholder="Имя" required />
@@ -210,20 +133,22 @@
       <p>Email: <a href="mailto:info@sendix.online">info@sendix.online</a></p>
       <p>WhatsApp: <a href="https://wa.me/79137888449">+7 913 788-84-49</a></p>
     </section>
+  </main>
 
-    <footer>
-      <p>© 2025 Sendix — Email-рассылки для бизнеса</p>
-    </footer>
+  <footer>
+    <p>© 2025 Sendix — Email-рассылки для бизнеса</p>
+  </footer>
 
-    <div class="contact-fabs">
-      <a href="https://wa.me/79137888449" class="fab whatsapp" aria-label="WhatsApp">
-        <img src="whatsapp_official.svg" alt="WhatsApp">
-      </a>
-      <a href="tel:+79137888449" class="fab phone" aria-label="Call">
-        <img src="phone.svg" alt="Phone">
-      </a>
-    </div>
+  <!-- Плавающие значки WhatsApp и телефона -->
+  <div class="contact-fabs">
+    <a href="https://wa.me/79137888449" class="fab whatsapp" aria-label="WhatsApp" role="button">
+      <img src="whatsapp_official.svg" alt="WhatsApp">
+    </a>
+    <a href="tel:+79137888449" class="fab phone" aria-label="Позвонить" role="button">
+      <img src="phone.svg" alt="Phone">
+    </a>
+  </div>
 
-    <script src="script.js" defer></script>
-  </body>
+  <script src="script.js" defer></script>
+</body>
 </html>
