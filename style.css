@@ -288,11 +288,63 @@ section:last-of-type { margin-bottom: 0; }
 }
 
 /* Pricing */
-.tariff-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-lg);
+.tariffs-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
 }
+
+.tariffs-title-row h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d6efd;
+  line-height: 1.2;
+}
+
+.tariffs-title-icon {
+  height: 2.2em; /* Пропорционально заголовку */
+  width: auto;
+  max-height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+.tariff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
 .tariff {
-  background: var(--color-surface); border-radius: var(--radius-md); padding: var(--space-lg); box-shadow: 0 .125rem .75rem var(--color-shadow-light); text-align: center;
+  background: #fff;
+  border-radius: 1.2rem;
+  border: 2.5px solid #0d6efd;
+  box-shadow: 0 1px 8px rgba(13,110,253,0.04);
+  padding: 2rem 1.25rem 1.5rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 170px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.tariff:hover {
+  box-shadow: 0 4px 16px rgba(13,110,253,0.10);
+  border-color: #0056b3;
+}
+.tariff h3 {
+  color: #0d6efd;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+.tariff p {
+  color: #23272f;
+  font-size: 1.05rem;
+  margin: 0;
 }
 
 /* Cases */
