@@ -8,6 +8,11 @@ body {
 
 header {
   background: #fff;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-size: 17px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 
 .nav-container {
@@ -20,10 +25,10 @@ header {
 
 nav ul {
   display: flex;
-  gap: 24px;
+  gap: 28px;
   list-style: none;
   padding: 0;
-  margin: 0 0 16px 0;
+  margin: 0 0 12px 0;
 }
 nav a {
   text-decoration: none;
@@ -33,12 +38,16 @@ nav a {
 nav ul li a {
   color: #0d6efd;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 17px;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   transition: color 0.2s;
+  letter-spacing: 0.01em;
 }
 
 nav ul li a:hover {
   color: #084298;
+  text-decoration: underline;
 }
 
 .hero {
@@ -174,16 +183,45 @@ footer {
 
 .header-logo {
   display: block;
-  margin: 16px auto;
-  max-width: 200px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  margin: 12px auto;
+  max-width: 120px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .header-logo img {
   width: 100%;
-  max-width: 200px;
+  max-width: 120px;
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+/* Чередующийся фон секций */
+.section {
+  background: #fff;
+}
+.section.alt {
+  background: #f8f9fa;
+}
+
+/* О нас — слева */
+#about .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  max-width: 1100px;
+}
+#about .text {
+  flex: 1 1 60%;
+  text-align: left;
+}
+#about .image {
+  flex: 1 1 40%;
+  text-align: left;
+}
+#about .image img {
+  max-width: 120px;
 }
