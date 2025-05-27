@@ -51,6 +51,13 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
   #main-nav.open { display: flex; }
 }
 
+/* Скрывать кнопку меню на экранах шире 900px */
+@media (min-width: 900px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
 /* Hero */
 .hero-block {
   width: 100%;
