@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -9,145 +8,210 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <!-- Шапка с логотипом -->
     <header>
-      <div class="container nav-container">
-        <nav>
-          <ul>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#problems">Топ-7 болей</a></li>
-            <li><a href="#for-whom">Кому подойдёт</a></li>
-            <li><a href="#tariffs">Тарифы</a></li>
-            <li><a href="#cases">Кейсы</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contacts">Контакты</a></li>
-          </ul>
-        </nav>
-        <a href="#" class="logo header-logo">
-          <img src="logo.png" alt="Sendix" />
-        </a>
-      </div>
+      <nav>
+        <button class="nav-toggle" aria-label="Открыть меню">&#9776;</button>
+        <ul class="nav-list">
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#problems">Топ-7 болей</a></li>
+          <li><a href="#for-whom">Кому подойдёт</a></li>
+          <li><a href="#tariffs">Тарифы</a></li>
+          <li><a href="#cases">Кейсы</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <!-- Главный экран -->
-    <section class="hero section" style="position:relative; overflow:hidden; width:100vw; height:100vh; min-height:600px;">
-      <img class="laptop" src="assets/img/hero-laptop.png" alt="Laptop" />
-      <div class="about-card">
-        <h2>О нас</h2>
-        <p>
-          Sendix — это профессиональный сервис email-рассылок по актуальным B2B-базам.<br>
-          Помогаем компаниям донести свои предложения напрямую до лиц, принимающих решения.<br>
-          Гарантируем прозрачную отчётность и юридическую корректность.
-        </p>
-      </div>
-      <div class="hero-text">
-        <h1>Ваш путь к новым клиентам</h1>
-        <p>Email-рассылки по бизнес-базам с результатом</p>
-        <strong>Вы увидели нас — увидят и вас, ваши клиенты</strong>
-      </div>
-      <a class="fab call" href="tel:+79137888449"><img src="icon-phone.png" alt="Позвонить" /></a>
-      <a class="fab wa" href="https://wa.me/79137888449"><img src="icon-whatsapp.png" alt="WhatsApp" /></a>
-    </section>
-
-    <!-- О нас + Кому подойдёт Z-структура -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="text">
-          <h2>О нас</h2>
-          <p>
-            Sendix — это профессиональный сервис email-рассылок по актуальным B2B-базам.
-            Помогаем компаниям донести свои предложения напрямую до лиц,
-            принимающих решения. Гарантируем прозрачную отчётность и
-            юридическую корректность.
-          </p>
-        </div>
-        <div class="image">
-          <img src="icon-brand.png" alt="О нас" />
-        </div>
-      </div>
-    </section>
-
-    <section id="for-whom" class="section alt z-right">
-      <div class="container">
-        <div class="image">
-          <img src="icon-lpr.png" alt="Кому подойдёт" />
-        </div>
-        <div class="text">
-          <h2>Кому подойдёт</h2>
-          <ul>
-            <li>Менеджеры по продажам и маркетологи</li>
-            <li>Руководители малого и среднего бизнеса</li>
-            <li>Компании, запускающие новый продукт или услугу</li>
-            <li>B2B-компании, которым нужно увеличить поток заявок</li>
-            <li>Бренды, которым важно повысить узнаваемость</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Топ-7 болей -->
-    <section id="problems" class="section">
-      <div class="container">
-        <h2>Топ-7 болей клиентов, которые решает email-рассылка</h2>
-        <div class="problems-grid">
-          <div class="problem-item">
-            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/><path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div>
-              <h4>Нет входящего потока заявок</h4>
-              <p>Рассылка приводит тёплые заявки — письма, звонки или переходы на сайт.</p>
-            </div>
+    <section class="hero-block" id="about">
+      <div class="hero-inner">
+        <div class="hero-about">
+          <div class="header-logo">
+            <img src="logo.png" alt="Sendix" />
           </div>
-          <!-- остальные 6 блоков аналогично -->
+          <div class="about-card-hero">
+            <h3>О нас</h3>
+            <p>
+              Sendix — это профессиональный сервис email-рассылок по актуальным B2B-базам.<br />
+              Помогаем компаниям донести свои предложения напрямую до лиц, принимающих решения.<br />
+              Гарантируем прозрачную отчётность и юридическую корректность.
+            </p>
+          </div>
+        </div>
+        <div class="hero-content">
+          <h1>Ваш путь к новым клиентам</h1>
+          <p class="subtitle">Email-рассылки по бизнес-базам с результатом</p>
+          <div class="hero-claim">
+            <strong>Вы увидели нас — увидят и вас, ваши клиенты.</strong>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Остальные блоки без изменений -->
-    <section id="tariffs" class="section alt">
-      <div class="container">
-        <h2>Тарифы</h2>
-        <!-- карточки тарифов -->
+    <!-- Блок "Топ-7 болей клиентов, которые решает email-рассылка" -->
+    <section id="problems" class="section">
+      <h2>Топ-7 болей клиентов, которые решает email-рассылка</h2>
+      <div class="problems-grid">
+        <div class="item">
+          <div class="problem-icon">
+            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
+          </div>
+          <div>
+            <h4>Нет входящего потока заявок</h4>
+            <div class="problem-desc">«Менеджеры работают только по холодным звонкам — откликов почти нет»</div>
+            <div class="problem-solution">Решение: Рассылка приводит тёплые заявки в виде входящих писем, звонков или переходов на сайт.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="problem-icon">
+            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
+          </div>
+          <div>
+            <h4>Сложно донести предложение до ЛПР</h4>
+            <div class="problem-desc">«Через звонок сложно пройти секретаря, через рекламу — дорого»</div>
+            <div class="problem-solution">Решение: Письмо доходит прямо на рабочий email руководителя отдела, закупщика или директора.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="problem-icon">
+            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
+          </div>
+          <div>
+            <h4>Потеря контакта после звонка</h4>
+            <div class="problem-desc">«Созвонились, но потом пропал. Нужен способ напомнить о себе»</div>
+            <div class="problem-solution">Решение: Рассылка — второе касание, повышает шансы вернуться в диалог.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="problem-icon">
+            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
+          </div>
+          <div>
+            <h4>Мало узнают о бренде</h4>
+            <div class="problem-desc">«О нас никто не знает. Хочу, чтобы хотя бы видели и запоминали»</div>
+            <div class="problem-solution">Решение: Email работает как охватный канал, особенно если внутри письмо с логотипом и коротким оффером.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="problem-icon">
+            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
+          </div>
+          <div>
+            <h4>Нужно протестировать нишу / оффер</h4>
+            <div class="problem-desc">«Хочу понять, интересна ли услуга, прежде чем масштабироваться»</div>
+            <div class="problem-solution">Решение: Рассылка — дешёвый и быстрый способ получить первые реакции рынка.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="problem-icon">
+            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
+          </div>
+          <div>
+            <h4>Дорого запускать рекламу</h4>
+            <div class="problem-desc">«Контекст и таргет слишком дорогие, слив бюджета — без заявок»</div>
+            <div class="problem-solution">Решение: Email-рассылка — фиксированная цена и предсказуемый охват.</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="problem-icon">
+            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/></svg>
+          </div>
+          <div>
+            <h4>Сложность аналитики и отчётов</h4>
+            <div class="problem-desc">«После рекламы не понимаю, кто перешёл, что сработало»</div>
+            <div class="problem-solution">Решение: Email-рассылка = понятная статистика: открытие, клики, заявки, домены.</div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="cases" class="section">
-      <div class="container">
-        <h2>Кейсы</h2>
-        <!-- блоки кейсов -->
+    <section class="for-whom" id="for-whom">
+      <h2>Кому подойдёт</h2>
+      <ul>
+        <li>Менеджеры по продажам и маркетологи</li>
+        <li>Руководители малого и среднего бизнеса</li>
+        <li>Компании, запускающие новый продукт или услугу</li>
+        <li>B2B-компании, которым нужно увеличить поток заявок</li>
+        <li>Бренды, которым важно повысить узнаваемость</li>
+      </ul>
+    </section>
+
+    <section class="pricing" id="tariffs">
+      <h2>Тарифы</h2>
+      <div class="tariff-grid">
+        <div class="tariff">
+          <h3>5 000 ₽</h3>
+          <p>Рассылка по вашей базе, вашего письма.</p>
+        </div>
+        <div class="tariff">
+          <h3>8 000 ₽</h3>
+          <p>Рассылка по базе Sendix (3300 компаний) + отчёт.</p>
+        </div>
+        <div class="tariff">
+          <h3>12 000 ₽</h3>
+          <p>База Sendix + письмо под вас + рекомендации + отчёт.</p>
+        </div>
+        <div class="tariff">
+          <h3>от 15 000 ₽</h3>
+          <p>Подбор базы под вас + письмо + рассылка + отчёт.</p>
+        </div>
       </div>
     </section>
 
-    <!-- FAQ слева -->
-    <section id="faq" class="section z-left">
-      <div class="container">
-        <h2>FAQ / Частые вопросы</h2>
-        <ul>
-          <li><strong>Как быстро старт?</strong> — В течение 24 часов после согласования.</li>
-          <li><strong>Можно свою базу?</strong> — Да, работаем и с вашей, и с нашей.</li>
-          <li><strong>Какой отчёт?</strong> — Открываемость, клики, ответы, заявки.</li>
-          <li><strong>Гарантия доставки?</strong> — Да, показываем статистику и подтверждение отправки.</li>
-        </ul>
+    <section class="cases" id="cases">
+      <h2>Кейсы</h2>
+      <div class="case">
+        <h4>Кейс 1: Рассылка по базе Sendix</h4>
+        <p>Открываемость: 67% — 12 заявок, 3 крупных лида.</p>
+      </div>
+      <div class="case">
+        <h4>Кейс 2: Рассылка по своей базе</h4>
+        <p>Открываемость: 58% — 7 заявок, 2 сделки.</p>
+      </div>
+      <div class="case">
+        <h4>Кейс 3: Индивидуальный текст</h4>
+        <p>Открываемость: 62% — 6 заявок, контракт на 3 мес.</p>
+      </div>
+      <div class="case">
+        <h4>Кейс 4: Повышение узнаваемости</h4>
+        <p>64% открываемость — рост прямых переходов на 17%.</p>
+      </div>
+      <div class="case">
+        <h4>Кейс 5: Поддержка после звонков</h4>
+        <p>71% открываемость — 5 вернулись в диалог, 1 встреча.</p>
       </div>
     </section>
 
-    <section id="contacts" class="section alt">
-      <div class="container">
-        <h2>Контакты</h2>
-        <form>
-          <input type="text" placeholder="Имя" required />
-          <input type="tel" placeholder="Телефон / WhatsApp" required />
-          <textarea placeholder="Сообщение" required></textarea>
-          <label><input type="checkbox" required /> Я соглашаюсь на обработку персональных данных</label>
-          <button type="submit">Отправить</button>
-        </form>
-        <p>Email: <a href="mailto:info@sendix.online">info@sendix.online</a></p>
-        <p>WhatsApp: <a href="https://wa.me/79137888449">+7 913 788-84-49</a></p>
-      </div>
+    <section class="faq" id="faq">
+      <h2>FAQ / Частые вопросы</h2>
+      <ul>
+        <li><strong>Как быстро старт?</strong> — В течение 24 часов после согласования.</li>
+        <li><strong>Можно свою базу?</strong> — Да, работаем и с вашей, и с нашей.</li>
+        <li><strong>Какой отчёт?</strong> — Открываемость, клики, ответы, заявки.</li>
+        <li><strong>Гарантия доставки?</strong> — Да, показываем статистику и подтверждение отправки.</li>
+      </ul>
     </section>
+
+    <section class="contacts" id="contacts">
+      <h2>Контакты</h2>
+      <form>
+        <input type="text" placeholder="Имя" required />
+        <input type="tel" placeholder="Телефон / WhatsApp" required />
+        <textarea placeholder="Сообщение" required></textarea>
+        <label><input type="checkbox" required /> Я соглашаюсь на обработку персональных данных</label>
+        <button type="submit">Отправить</button>
+      </form>
+      <p>Email: <a href="mailto:info@sendix.online">info@sendix.online</a></p>
+      <p>WhatsApp: <a href="https://wa.me/79137888449">+7 913 788-84-49</a></p>
+    </section>
+
+    <a class="fab call" href="tel:+79137888449" title="Позвонить"><img src="icon-phone.png" alt="Позвонить"></a>
+    <a class="fab wa" href="https://wa.me/79137888449" title="WhatsApp"><img src="icon-whatsapp.png" alt="WhatsApp"></a>
 
     <footer>
       <p>© 2025 Sendix — Email-рассылки для бизнеса</p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
