@@ -4,23 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sendix — Email-рассылки</title>
-    <link href="style.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <header>
-      <nav>
-        <button class="nav-toggle" aria-label="Открыть меню">&#9776;</button>
-        <ul class="nav-list">
-          <li><a href="#about">О нас</a></li>
-          <li><a href="#problems">Топ-7 болей</a></li>
-          <li><a href="#for-whom">Кому подойдёт</a></li>
-          <li><a href="#tariffs">Тарифы</a></li>
-          <li><a href="#cases">Кейсы</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-        </ul>
-      </nav>
+  <nav>
+  <button
+    class="nav-toggle"
+    aria-label="Открыть меню"
+    aria-controls="main-nav"
+    aria-expanded="false"
+  >☰</button>
+
+  <ul id="main-nav" class="nav-list">
+    <li><a href="#about">О нас</a></li>
+    <li><a href="#problems">Топ-7 болей</a></li>
+    <li><a href="#for-whom">Кому подойдёт</a></li>
+    <li><a href="#tariffs">Тарифы</a></li>
+    <li><a href="#cases">Кейсы</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contacts">Контакты</a></li>
+  </ul>
+</nav>
     </header>
 
     <section class="hero-block" id="about">
@@ -212,6 +218,6 @@
       <p>© 2025 Sendix — Email-рассылки для бизнеса</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
