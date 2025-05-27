@@ -153,9 +153,10 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
   margin: 0 auto;
 }
 .header-logo img {
-  width: 100%;
-  max-width: 360px; /* увеличено */
-  height: auto;
+  width: 300px !important;
+  height: 300px !important;
+  max-width: none;
+  max-height: none;
   display: block;
 }
 @media (max-width: 900px) {
