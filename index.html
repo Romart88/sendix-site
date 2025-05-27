@@ -197,7 +197,7 @@
 
     <section class="pricing section" id="tariffs">
       <div class="tariffs-title-row">
-        <h2>Тарифы</h2>
+        <h2 class="tariffs-title">Тарифы</h2>
         <img src="price.png" alt="" class="tariffs-title-icon" />
       </div>
       <div class="tariff-grid">
@@ -306,16 +306,21 @@
     </section>
 
     <section class="contacts section" id="contacts">
-      <h2>Контакты</h2>
-      <form>
+      <h2>Отправить заявку</h2>
+      <form class="contacts-form">
         <input type="text" placeholder="Имя" required />
         <input type="tel" placeholder="Телефон / WhatsApp" required />
         <textarea placeholder="Сообщение" required></textarea>
-        <label><input type="checkbox" required /> Я соглашаюсь на обработку персональных данных</label>
+        <label class="contacts-checkbox">
+          <input type="checkbox" required />
+          Я соглашаюсь на обработку персональных данных
+        </label>
         <button type="submit">Отправить</button>
       </form>
-      <p>Email: <a href="mailto:info@sendix.online">info@sendix.online</a></p>
-      <p>WhatsApp: <a href="https://wa.me/79137888449">+7 913 788-84-49</a></p>
+      <div class="contacts-extra">
+        <p>Email: <a href="mailto:info@sendix.online">info@sendix.online</a></p>
+        <p>WhatsApp: <a href="https://wa.me/79137888449">+7 913 788-84-49</a></p>
+      </div>
     </section>
   </main>
 
