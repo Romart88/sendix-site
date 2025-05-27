@@ -521,9 +521,32 @@ section:last-of-type { margin-bottom: 0; }
   display: inline-block;
 }
 
+.faq-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.faq-title-icon {
+  height: 4em;   /* 4 раза больше стандартного размера строки */
+  width: auto;
+  max-height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
 @media (max-width: 700px) {
   .faq ul {
     grid-template-columns: 1fr;
+  }
+  .faq-title-icon {
+    height: 2em;
+    max-height: 40px;
+  }
+  .faq-title-row {
+    gap: 0.7rem;
+    margin-bottom: 1.2rem;
   }
 }
 
@@ -750,6 +773,7 @@ footer {
 
 /* Cases title row */
 .cases-title-row {
+  font-size: 3em;
   display: flex;
   align-items: center;
   gap: 1.2rem;
