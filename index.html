@@ -30,25 +30,27 @@
     </header>
 
     <!-- Главный экран -->
-    <section class="hero section">
-      <div class="container z-center">
-        <div class="text">
-          <h1>Ваш путь к новым клиентам</h1>
-          <p>Email-рассылки по бизнес-базам с результатом</p>
-          <strong>Вы увидели нас — увидят и вас, ваши клиенты</strong>
-        </div>
-        <div class="image">
-          <img class="hero-img" src="hero-laptop.png" alt="Laptop" />
-        </div>
-        <div class="fixed-btns">
-          <a class="fab call" href="tel:+79137888449"><img src="icon-phone.png" alt="Позвонить" /></a>
-          <a class="fab wa" href="https://wa.me/79137888449"><img src="icon-whatsapp.png" alt="WhatsApp" /></a>
-        </div>
+    <section class="hero section" style="position:relative; overflow:hidden; width:100vw; height:100vh; min-height:600px;">
+      <img class="laptop" src="assets/img/hero-laptop.png" alt="Laptop" />
+      <div class="about-card">
+        <h2>О нас</h2>
+        <p>
+          Sendix — это профессиональный сервис email-рассылок по актуальным B2B-базам.<br>
+          Помогаем компаниям донести свои предложения напрямую до лиц, принимающих решения.<br>
+          Гарантируем прозрачную отчётность и юридическую корректность.
+        </p>
       </div>
+      <div class="hero-text">
+        <h1>Ваш путь к новым клиентам</h1>
+        <p>Email-рассылки по бизнес-базам с результатом</p>
+        <strong>Вы увидели нас — увидят и вас, ваши клиенты</strong>
+      </div>
+      <a class="fab call" href="tel:+79137888449"><img src="icon-phone.png" alt="Позвонить" /></a>
+      <a class="fab wa" href="https://wa.me/79137888449"><img src="icon-whatsapp.png" alt="WhatsApp" /></a>
     </section>
 
     <!-- О нас + Кому подойдёт Z-структура -->
-    <section id="about" class="section z-left">
+    <section id="about" class="section">
       <div class="container">
         <div class="text">
           <h2>О нас</h2>
@@ -87,12 +89,13 @@
     <section id="problems" class="section">
       <div class="container">
         <h2>Топ-7 болей клиентов, которые решает email-рассылка</h2>
-        <div class="grid">
-          <!-- карточки проблем -->
-          <div class="item">
-            <img src="icon-leads.png" alt="Нет заявок" />
-            <h4>Нет входящего потока заявок</h4>
-            <p>Рассылка приводит тёплые заявки — письма, звонки или переходы на сайт.</p>
+        <div class="problems-grid">
+          <div class="problem-item">
+            <svg width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#ef4444"/><path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <h4>Нет входящего потока заявок</h4>
+              <p>Рассылка приводит тёплые заявки — письма, звонки или переходы на сайт.</p>
+            </div>
           </div>
           <!-- остальные 6 блоков аналогично -->
         </div>
