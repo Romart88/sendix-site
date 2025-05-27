@@ -71,7 +71,8 @@ header {
 }
 
 nav {
-  max-width: 75rem;
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
   padding: 0 var(--space-md);
   display: flex;
@@ -94,16 +95,14 @@ nav {
 }
 
 .nav-list {
-  display: none;
-  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
   background: var(--color-surface);
-  position: absolute;
-  top: 3rem;
-  left: 0;
-  right: 0;
-  box-shadow: 0 0.125rem 0.75rem var(--color-shadow);
-  padding: var(--space-lg) 0;
-  z-index: 100;
 }
 
 .nav-list.open {
@@ -149,6 +148,11 @@ section {
   max-width: 75rem;
   margin: 0 auto;
   padding: var(--space-xl) var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+section:last-of-type {
+  margin-bottom: 0;
 }
 
 h2 {
@@ -159,15 +163,19 @@ h2 {
 
 /* Hero Block */
 .hero-block {
-  width: 100vw;
+  width: 100%;
   min-height: 480px;
-  background: linear-gradient(120deg, #f5f6f7 0%, #fff 100%);
+  background: #eaf3fb;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
   position: relative;
   overflow: hidden;
+}
+
+.hero-block.grad {
+  background: linear-gradient(120deg, #eaf3fb 0%, #fff 100%);
 }
 
 .hero-inner {
