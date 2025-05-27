@@ -141,7 +141,7 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
 }
 .header-logo {
   width: 100%;
-  max-width: 400px; /* увеличено в 2 раза */
+  max-width: 500px; /* увеличено в 2 раза */
   aspect-ratio: 1/1;
   background: linear-gradient(135deg, #0d6efd 60%, #0056b3 100%);
   border-radius: 1.5rem;
@@ -153,8 +153,8 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
   margin: 0 auto;
 }
 .header-logo img {
-  width: 300px !important;
-  height: 300px !important;
+  width: 500px !important;
+  height: 500px !important;
   max-width: none;
   max-height: none;
 }
