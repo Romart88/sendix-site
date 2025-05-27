@@ -340,7 +340,7 @@ section:last-of-type { margin-bottom: 0; }
 .for-whom-top-icon {
   display: flex;
   justify-content: center;
-  align
+  align-items: center;
   margin-bottom: 1.2rem;
 }
 
@@ -396,7 +396,7 @@ section:last-of-type { margin-bottom: 0; }
   border-radius: 1.2rem;
   border: 2.5px solid #0d6efd;
   box-shadow: 0 1px 8px rgba(13,110,253,0.04);
-  padding: 2rem 1.25rem 1.5rem 
+  padding: 2rem 1.25rem 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
