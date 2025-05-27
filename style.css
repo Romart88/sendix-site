@@ -8,24 +8,37 @@ body {
 
 header {
   background: #fff;
-  padding: 20px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
-nav ul {
-  list-style: none;
+
+.nav-container {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 16px 0;
 }
 nav a {
   text-decoration: none;
   color: #000;
   font-weight: 600;
+}
+nav ul li a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #084298;
 }
 
 .hero {
