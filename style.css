@@ -157,7 +157,6 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
   height: 300px !important;
   max-width: none;
   max-height: none;
-  display: block;
 }
 @media (max-width: 900px) {
   .header-logo {
