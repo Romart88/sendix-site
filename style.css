@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+  --font-base: 'Montserrat', sans-serif;
 /* Reset & Global Settings */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -239,14 +243,19 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 var(--space-sm);
+  padding: var(--space-lg);
   text-align: center;
+
+  background: #eaf3fb;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 0.125rem 0.75rem var(--color-shadow-light);
 }
 
+/* Для больших экранов оставляем выравнивание влево */
 @media (min-width: 901px) {
   .hero-content {
     text-align: left;
-    padding: 0;
+    padding: var(--space-lg);
   }
 }
 
