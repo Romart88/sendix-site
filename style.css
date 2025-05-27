@@ -57,8 +57,8 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
   margin: 0 auto;
   border-radius: 2rem;
   display: flex;
-  background: transparent;
-  box-shadow: none;
+  background: transparent; /* убираем белый фон */
+  box-shadow: none;        /* убираем тень */
   position: relative;
   z-index: 2;
 }
@@ -155,6 +155,7 @@ section { margin-bottom: var(--space-xl); }
 section:last-of-type { margin-bottom: 0; }
 
 /* Problems grid */
+/* Проблемы: плитки по 2 на строку, последняя на всю ширину */
 .problems-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -173,6 +174,11 @@ section:last-of-type { margin-bottom: 0; }
 
 .problems-grid .item-wide {
   grid-column: 1 / -1;
+}
+
+.problem-solution strong {
+  color: #0d6efd;
+  font-weight: 700;
 }
 
 @media (max-width: 700px) {
@@ -197,7 +203,52 @@ section:last-of-type { margin-bottom: 0; }
 
 /* Cases */
 .case {
-  background: var(--color-surface); border-left: 4px solid var(--color-primary); padding: var(--space-md); margin-bottom: var(--space-lg);
+  background: #fff;
+  border-left: 4px solid #0d6efd;
+  border-radius: 1rem;
+  box-shadow: 0 1px 8px rgba(13,110,253,0.07);
+  padding: 1.5rem 1.25rem 1.25rem 1.5rem;
+  color: #23272f;
+  font-size: 1.08rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.case:hover {
+  box-shadow: 0 4px 16px rgba(13,110,253,0.13);
+  border-color: #84c0ff;
+}
+.case h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.15rem;
+  color: #0d6efd;
+  font-weight: 700;
+}
+.case ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.case ul li {
+  padding-left: 1.1em;
+  position: relative;
+}
+.case ul li::before {
+  content: "•";
+  color: #0d6efd;
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  top: 0;
+}
+.case-note {
+  color: #6c757d;
+  font-size: 0.98em;
+  margin-top: 0.3em;
 }
 
 /* FAQ */
