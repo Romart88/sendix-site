@@ -174,3 +174,48 @@ footer {
   height: auto;
   margin: 0 auto;
 }
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 32px;
+  margin-top: 32px;
+}
+
+.problems-grid .item {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 22px 20px 18px 20px;
+  gap: 18px;
+  min-height: 160px;
+}
+
+.problem-icon {
+  margin-right: 10px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.problems-grid h4 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.2;
+}
+
+.problem-desc {
+  color: #ef4444;
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.problem-solution {
+  color: #374151;
+  font-size: 15px;
+  line-height: 1.4;
+}
