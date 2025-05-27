@@ -192,6 +192,30 @@ section:last-of-type { margin-bottom: 0; }
   }
 }
 
+/* Problems title row */
+.problems-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 2rem;
+  justify-content: flex-start;
+}
+
+.problems-title-row h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #23272f;
+  line-height: 1.2;
+}
+
+.problems-title-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  display: block;
+}
+
 /* For-whom */
 .for-whom {
   background: #f5f8fa;
@@ -405,3 +429,31 @@ footer {
 }
 .contact-fabs .fab:hover { transform: scale(1.1); }
 .contact-fabs .fab img { width: 1.5rem; height: 1.5rem; }
+
+.problem-content {
+  width: 100%;
+}
+
+.problem-content h4 {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #23272f;
+  margin-bottom: 0.2rem;
+  display: inline-block;
+}
+
+.problem-content img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.2rem;
+}
+
+@media (max-width: 700px) {
+  .problem-content h4 {
+    font-size: 1rem;
+  }
+  .problem-content img {
+    width: 26px;
+    height: 26px;
+  }
+}
