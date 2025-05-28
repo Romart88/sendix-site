@@ -311,16 +311,42 @@
 
     <section class="contacts section" id="contacts">
       <h2>Отправить заявку</h2>
-      <form class="contacts-form">
-        <input type="text" placeholder="Имя" required />
-        <input type="tel" placeholder="Телефон / WhatsApp" required />
-        <textarea placeholder="Сообщение" required></textarea>
-        <label class="contacts-checkbox">
-          <input type="checkbox" required />
-          Я соглашаюсь на обработку персональных данных
-        </label>
-        <button type="submit">Отправить</button>
-      </form>
+      <style type="text/css" scoped>
+        .mauticform-field-hidden { display:none }
+      </style>
+      <div id="mauticform_wrapper_sendixsite" class="mauticform_wrapper">
+        <form autocomplete="false" role="form" method="post"
+              action="http://mautic.sendix.online/form/submit?formId=30"
+              id="mauticform_sendixsite"
+              data-mautic-form="sendixsite"
+              enctype="multipart/form-data">
+          <div class="mauticform-error" id="mauticform_sendixsite_error"></div>
+          <div class="mauticform-message" id="mauticform_sendixsite_message"></div>
+          <div class="mauticform-innerform">
+            <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
+              <div class="mauticform-row mauticform-text mauticform-required">
+                <input type="text" name="mauticform[f_name]" class="mauticform-input" placeholder="Имя" />
+              </div>
+              <div class="mauticform-row mauticform-text mauticform-required">
+                <input type="text" name="mauticform[number]" class="mauticform-input" placeholder="Телефон / WhatsApp" />
+              </div>
+              <div class="mauticform-row mauticform-text">
+                <textarea name="mauticform[massage]" class="mauticform-textarea" placeholder="Сообщение"></textarea>
+              </div>
+              <div class="mauticform-row mauticform-radiogrp mauticform-required">
+                <label class="mauticform-label">Я соглашаюсь на обработку персональных данных</label>
+                <input type="radio" name="mauticform[a_soglasen_na_obrabotku_p]" value="Yes" />
+              </div>
+              <div class="mauticform-row mauticform-button-wrapper">
+                <button type="submit" class="mauticform-button">Отправить</button>
+              </div>
+            </div>
+          </div>
+          <input type="hidden" name="mauticform[formId]" value="30">
+          <input type="hidden" name="mauticform[return]" value="">
+          <input type="hidden" name="mauticform[formName]" value="sendixsite">
+        </form>
+      </div>
       <div class="contacts-extra">
         <p>Email: <a href="mailto:info@sendix.online">info@sendix.online</a></p>
         <p>WhatsApp: <a href="https://wa.me/79137888449">+7 913 788-84-49</a></p>
@@ -343,5 +369,25 @@
   </div>
 
   <script src="script.js" defer></script>
+  <script type="text/javascript">
+    /** This section is only needed once per page if manually copying **/
+    if (typeof MauticSDKLoaded == 'undefined') {
+        var MauticSDKLoaded = true;
+        var head            = document.getElementsByTagName('head')[0];
+        var script          = document.createElement('script');
+        script.type         = 'text/javascript';
+        script.src          = 'http://mautic.sendix.online/media/js/mautic-form.js?va3198e66';
+        script.onload       = function() {
+            MauticSDK.onLoad();
+        };
+        head.appendChild(script);
+        var MauticDomain = 'http://mautic.sendix.online';
+        var MauticLang   = {
+            'submittingMessage': "Один момент..."
+        }
+    }else if (typeof MauticSDK != 'undefined') {
+        MauticSDK.onLoad();
+    }
+  </script>
 </body>
 </html>
