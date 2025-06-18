@@ -140,14 +140,14 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
   gap: 2rem;
 }
 .header-logo {
-  width: 200px;           /* или нужный размер */
-  height: 200px;          /* квадрат */
-  background: #0d6efd;    /* синий фон */
+  width: 240px;
+  height: 240px;
+  background: #0d6efd;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 24px;    /* если нужен скруглённый квадрат */
-  margin: 0 auto;         /* центрирует сам блок, если нужно */
+  border-radius: 24px;
+  margin: 0 auto;
 }
 .header-logo img {
   max-width: 80%;
@@ -193,6 +193,10 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
   text-align: left;
   width: 100%;
   max-width: 420px;
+  font-weight: 500; /* Сделать текст чуть жирнее */
+}
+.about-card-hero strong {
+  font-weight: 700; /* Слово Sendix — жирное */
 }
 .about-card-hero h3 {
   margin-top: 0;
@@ -834,6 +838,50 @@ footer {
   .cases-list .case {
     font-size: 1.05rem;
   }
+}
+
+.about-card-hero {
+  background: #fff;
+  color: #23272f;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+  padding: 2.2rem 2rem 1.7rem 2rem;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  text-align: left;
+  width: 100%;
+  max-width: 420px;
+  font-weight: 500; /* Сделать текст чуть жирнее */
+}
+.about-card-hero strong {
+  font-weight: 700; /* Слово Sendix — жирное */
+}
+.about-card-hero h3 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+.hero-main-text {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.hero-main-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #23272f;
+  margin-bottom: 1.1rem;
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+}
+.hero-claim strong {
+  color: #007bff;
+  font-size: 1.08rem;
+  font-weight: 600;
+  display: block;
+  margin-top: 0.5rem;
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
 }
 
 
