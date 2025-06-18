@@ -113,20 +113,12 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
   }
 }
 @media (max-width: 500px) {
-  .hero-inner {
-    padding: 0.7rem 0.2rem;
-    gap: 1rem;
-  }
+  .hero-main-text h1,
   .header-logo {
-    max-width: 90px;
-    padding: 0.4rem;
+    max-width: 95vw;
   }
   .about-card-hero {
-    padding: 0.8rem 0.3rem 0.7rem 0.3rem;
-    font-size: 0.97rem;
-  }
-  .hero-main-text h1 {
-    font-size: 1.1rem;
+    font-size: 0.98rem;
   }
 }
 .hero-logo-side {
@@ -140,8 +132,9 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
   gap: 2rem;
 }
 .header-logo {
-  width: 280px;
-  height: 280px;
+  width: 100%;
+  max-width: 420px; /* Совпадает с max-width заголовка */
+  aspect-ratio: 1 / 1; /* Квадрат всегда */
   background: #0d6efd;
   display: flex;
   align-items: center;
@@ -183,20 +176,20 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
   }
 }
 .about-card-hero {
-  background: #fff;
-  color: #23272f;
-  border-radius: 1.2rem;
-  box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+  background: var(--color-surface, #fff);
+  color: var(--color-text, #23272f);
+  border-radius: var(--radius-lg, 1.2rem);
+  box-shadow: 0 2px 12px var(--color-shadow, rgba(30,41,59,0.07));
   padding: 2.2rem 2rem 1.7rem 2rem;
   font-size: 1.08rem;
   line-height: 1.6;
   text-align: left;
   width: 100%;
   max-width: 420px;
-  font-weight: 500; /* Сделать текст чуть жирнее */
+  font-weight: 500;
 }
 .about-card-hero strong {
-  font-weight: 700; /* Слово Sendix — жирное */
+  font-weight: 700;
 }
 .about-card-hero h3 {
   margin-top: 0;
@@ -204,6 +197,17 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
   font-size: 1.3rem;
   font-weight: 700;
   color: #1f2937;
+}
+@media (max-width: 500px) {
+  .about-card-hero {
+    font-size: 0.98rem;
+  }
+}
+@media (max-width: 350px) {
+  .about-card-hero {
+    font-size: 0.92rem;
+    padding: 1rem 0.5rem;
+  }
 }
 .hero-main-text {
   width: 100%;
@@ -216,6 +220,10 @@ nav { width: 100%; padding: 0 var(--space-md); display: flex; justify-content: c
   color: #23272f;
   margin-bottom: 1.1rem;
   font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+  text-align: center;
+  width: 100%;
+  max-width: 420px; /* или другое ограничение */
+  margin: 0 auto 1.1rem auto;
 }
 .hero-claim strong {
   color: #007bff;
@@ -333,7 +341,7 @@ section:last-of-type { margin-bottom: 0; }
   align-items: center;
   gap: 0.9rem;
   position: relative;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s, color 0.2s;
 }
 .for-whom-list li:hover {
   box-shadow: 0 4px 16px rgba(13,110,253,0.10);
@@ -841,20 +849,20 @@ footer {
 }
 
 .about-card-hero {
-  background: #fff;
-  color: #23272f;
-  border-radius: 1.2rem;
-  box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+  background: var(--color-surface, #fff);
+  color: var(--color-text, #23272f);
+  border-radius: var(--radius-lg, 1.2rem);
+  box-shadow: 0 2px 12px var(--color-shadow, rgba(30,41,59,0.07));
   padding: 2.2rem 2rem 1.7rem 2rem;
   font-size: 1.08rem;
   line-height: 1.6;
   text-align: left;
   width: 100%;
   max-width: 420px;
-  font-weight: 500; /* Сделать текст чуть жирнее */
+  font-weight: 500;
 }
 .about-card-hero strong {
-  font-weight: 700; /* Слово Sendix — жирное */
+  font-weight: 700;
 }
 .about-card-hero h3 {
   margin-top: 0;
@@ -863,25 +871,23 @@ footer {
   font-weight: 700;
   color: #1f2937;
 }
-.hero-main-text {
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
+@media (max-width: 500px) {
+  .about-card-hero {
+    font-size: 0.98rem;
+  }
 }
-.hero-main-text h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #23272f;
-  margin-bottom: 1.1rem;
-  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+@media (max-width: 350px) {
+  .about-card-hero {
+    font-size: 0.92rem;
+    padding: 1rem 0.5rem;
+  }
 }
-.hero-claim strong {
-  color: #007bff;
-  font-size: 1.08rem;
-  font-weight: 600;
-  display: block;
-  margin-top: 0.5rem;
-  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+
+.tariff,
+.case,
+.for-whom-list li,
+.contacts-form button {
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s, color 0.2s;
 }
 
 
